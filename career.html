@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Your Career</title>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="career.css">
+  <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Rokkitt&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gudea&display=swap" rel="stylesheet">
+  <script type="text/javascript" src = " careerjs.js"></script>
+  <style>
+  /* Make the image fully responsive */
+
+  .carousel-inner img {
+    width: 100%;
+    height: 700px;
+  }
+  
+  </style>
+
+  <script type="text/javascript">
+ 
+  </script>
+ 
+</head>
+<body>
+<!-- Navbar -->
+<!-- Navbar starts-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <a class="navbar-brand" href="page1.html"><img src="logo.jpg" width="50" height="30" class="d-inline-block align-top" alt="VisionQuest">
+      VisionQuest
+      </a>
+
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active" id="shift">
+           <a class="nav-link" href="page1.html"><i class="fas fa-home" style='font-size:24px;color:#D80000;'></i>Home</a>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link" href="career.html"><i class="fas fa-graduation-cap" style='font-size:24px;color:#D80000;'></i>Careers</a>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link " href="Sitesh\allcourses.html"><i class="fas fa-book" style='font-size:24px;color:#D80000;'></i>Courses</a>
+          </li>
+
+          <li class="nav-item active dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-sign-in-alt" style='font-size:24px;color:#D80000;'></i>Login</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="signup_page.html">Sign Up</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="login_page.html">Login</a>
+            </div>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link" href="about.html"><i class="fas fa-user" style='font-size:24px;color:#D80000;'></i>About Us</a>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link" href="contact.html"><i class="fas fa-phone-square" style='font-size:24px;color:#D80000;'></i>Contact Us</a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+    <!-- navbar ends -->
+<!-- end of nav -->
+
+<!-- starting of slider -->
+<div id = "parentClass">
+<div id="demo" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="shoes.jpg" alt="Los Angeles" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>If you're walking down the right path and you're willing to keep walking, eventually you'll make progress.</h3>
+        <p>Barack Obama</p>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="road.jpg" alt="Chicago" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>The path from dreams to success does exist. May you have the vision to find it, the courage to get on to it, and the perseverance to follow it.</h3>
+        <p>Kalpana Chawla</p>
+      </div>   
+    </div>
+    <div class="carousel-item">
+      <img src="hiker.jpg" alt="New York" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>I see my path, but I don't know where it leads. Not knowing where I'm going is what inspires me to travel it.</h3>
+        <p>Rosalia de Castro</p>
+      </div>   
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+<div class = "fiesta">
+    <button id = "show">Helping Hand ?</button>
+  </div>
+  <div id = "hidden">
+    <div>
+      <a href="#pathHeader"><button id = "know">Know About Your Pathway</button></a>
+    </div>
+    <div>
+    <a href="#faqs"><button id = "decide">Decide your Pathway</button></a>
+    </div>
+  </div>
+</div>
+
+<h2 id = "pathHeader">Select Your Pathway</h2>
+<div class="row">
+  <a href="#machineHeader"><div class="col-md-4 Blocks"><div class = "sub"><p class="theId">Machine Learning</p></div></div></a>
+  <a href="#webHeader"><div class="col-md-4 Blocks"><div class = "sub"><p class="theId">Web Development</p></div></div></a>
+  <a href="#bcHeader"><div class="col-md-4 Blocks"><div class = "sub"><p class="theId">BlockChain</p></div></div></a>
+  <a href="#aiHeader"><div class="col-md-4 Blocks"><div class = "sub"><p class="theId">Artificial Intelligence</p></div></div></a>
+  <a href="#dsHeader"><div class="col-md-4 Blocks"><div class = "sub"><p class="theId">Data Science</p></div></div></a>
+  <a href="#ccHeader"><div class="col-md-4 Blocks"><div class = "sub"><p class="theId">Cloud Computing</p></div></div></a>
+</div>
+
+<div class = "pathways">
+<div id = "videoDiv" class="row">
+  <div class="col-md-12 that">
+    <video autoplay autoplay muted loop height="400px" width="700px">
+    <source src="videoplayback.mp4" type="video/mp4">
+    </video>
+
+    <h2 id = "machineHeader" class = "headers">Machine Learning <a href="Sitesh\allcourses.html"><p class = "linkText">Go to courses.</p></a></h2>
+
+  </div>
+  
+</div>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <p class = "info">
+      Machine learning (ML) is the scientific study of algorithms and statistical models that computer systems use to perform a specific task without using explicit instructions, relying on patterns and inference instead. It is seen as a subset of artificial intelligence. Machine learning algorithms build a mathematical model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to perform the task. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop a conventional algorithm for effectively performing the task.
+    </p>
+    <p class = "info">
+      Machine learning is closely related to computational statistics, which focuses on making predictions using computers. The study of mathematical optimization delivers methods, theory and application domains to the field of machine learning. Data mining is a field of study within machine learning, and focuses on exploratory data analysis through unsupervised learning. In its application across business problems, machine learning is also referred to as predictive analytics.
+    </p>
+  </div>
+</div>
+
+</div>
+
+<!-- the  for aritificial intelligence -->
+<div class = "pathways">
+<div  class="row">
+  <div class="col-md-12 that">
+    <video autoplay autoplay muted loop height="400px" width="700px">
+    <source src="ai.mp4" type="video/mp4">
+    </video>
+
+    <h2 id = "aiHeader" class = "headers">Artificial <p> Intelligence</p> <a href="Sitesh\allcourses.html"><p class = "linkText">Go to courses</p></a></h2>
+  </div>
+  
+</div>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <p class = "info">
+      In computer science, artificial intelligence (AI), sometimes called machine intelligence, is intelligence demonstrated by machines, in contrast to the natural intelligence displayed by humans. Leading AI textbooks define the field as the study of "intelligent agents": any device that perceives its environment and takes actions that maximize its chance of successfully achieving its goals. Colloquially, the term "artificial intelligence" is often used to describe machines (or computers) that mimic "cognitive" functions that humans associate with the human mind, such as "learning" and "problem solving".<br>
+
+      As machines become increasingly capable, tasks considered to require "intelligence" are often removed from the definition of AI, a phenomenon known as the AI effect. A quip in Tesler's Theorem says "AI is whatever hasn't been done yet."For instance, optical character recognition is frequently excluded from things considered to be AI, having become a routine technology. Modern machine capabilities generally classified as AI include successfully understanding human speech, competing at the highest level in strategic game systems (such as chess and Go), autonomously operating cars, intelligent routing in content delivery networks, and military simulations.
+    </p>
+    <p class = "info">
+      Artificial intelligence can be classified into three different types of systems:
+      <br>
+      1. Analytical <br>
+      2. Human-inspired <br>
+      3. Humanized artificial intelligence. <br>
+      Analytical AI has only characteristics consistent with cognitive intelligence; generating a cognitive representation of the world and using learning based on past experience to inform future decisions. Human-inspired AI has elements from cognitive and emotional intelligence; understanding human emotions, in addition to cognitive elements, and considering them in their decision making. Humanized AI shows characteristics of all types of competencies (i.e., cognitive, emotional, and social intelligence), is able to be self-conscious and is self-aware in interactions.
+    </p>
+  </div>
+</div>
+
+</div>
+
+<!-- now for web development -->
+
+<div class = "pathways">
+<div  class="row">
+  <div class="col-md-12 that">
+    <video autoplay autoplay muted loop height="400px" width="700px">
+    <source src="webd.mp4" type="video/mp4">
+    </video>
+
+    <h2 id = "webHeader" class = "headers">Web <p> Development</p><a href="Sitesh\allcourses.html"><p class = "linkText">Go to courses</p></a></h2>
+  </div>
+  
+</div>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <p class = "info">
+      Web development is the work involved in developing a web site for the Internet (World Wide Web) or an intranet (a private network). Web development can range from developing a simple single static page of plain text to complex web-based internet applications (web apps), electronic businesses, and social network services. A more comprehensive list of tasks to which web development commonly refers, may include web engineering, web design, web content development, client liaison, client-side/server-side scripting, web server and network security configuration, and e-commerce development.<br>
+
+      Among web professionals, "web development" usually refers to the main non-design aspects of building web sites: writing markup and coding. Web development may use content management systems (CMS) to make content changes easier and available with basic technical skills.
+    </p>
+    <p class = "info">
+      For larger organizations and businesses, web development teams can consist of hundreds of people (web developers) and follow standard methods like Agile methodologies while developing websites. Smaller organizations may only require a single permanent or contracting developer, or secondary assignment to related job positions such as a graphic designer or information systems technician. Web development may be a collaborative effort between departments rather than the domain of a designated department. There are three kinds of web developer specialization: front-end developer, back-end developer, and full-stack developer. Front-end developers responsible for behavior and visuals that run in the user browser, while back-end developers deal with the servers.
+    </p>
+  </div>
+</div>
+
+</div>
+
+<!-- for blockchain -->
+
+<div class = "pathways">
+<div  class="row">
+  <div class="col-md-12 that">
+    <video autoplay autoplay muted loop height="400px" width="700px">
+    <source src="blocks.mp4" type="video/mp4">
+    </video>
+
+    <h2 id = "bcHeader" class = "headers"> BlockChain<a href="Sitesh\allcourses.html"><p class = "linkText">Go to courses</p></a></h2>
+  </div>
+  
+</div>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <p class = "info">
+      A blockchain, originally block chain, is a growing list of records, called blocks, that are linked using cryptography. Each block contains a cryptographic hash of the previous block, a timestamp, and transaction data (generally represented as a Merkle tree).<br>
+
+      By design, a blockchain is resistant to modification of the data. It is "an open, distributed ledger that can record transactions between two parties efficiently and in a verifiable and permanent way". For use as a distributed ledger, a blockchain is typically managed by a peer-to-peer network collectively adhering to a protocol for inter-node communication and validating new blocks. Once recorded, the data in any given block cannot be altered retroactively without alteration of all subsequent blocks, which requires consensus of the network majority. Although blockchain records are not unalterable, blockchains may be considered secure by design and exemplify a distributed computing system with high Byzantine fault tolerance. Decentralized consensus has therefore been claimed with a blockchain.
+    <p class = "info">
+      Blockchain was invented by a person (or group of people) using the name Satoshi Nakamoto in 2008 to serve as the public transaction ledger of the cryptocurrency bitcoin. The identity of Satoshi Nakamoto is unknown. The invention of the blockchain for bitcoin made it the first digital currency to solve the double-spending problem without the need of a trusted authority or central server. The bitcoin design has inspired other applications, and blockchains that are readable by the public are widely used by cryptocurrencies. Blockchain is considered a type of payment rail. Private blockchains have been proposed for business use. Sources such as Computerworld called the marketing of such blockchains without a proper security model "snake oil".
+    </p>
+  </div>
+</div>
+
+</div>
+
+
+<!-- now for cloud computing -->
+
+<div class = "pathways">
+<div  class="row">
+  <div class="col-md-12 that">
+    <video autoplay autoplay muted loop height="400px" width="700px">
+    <source src="cc.mp4" type="video/mp4">
+    </video>
+
+    <h2 id = "ccHeader" class = "headers">Cloud <p> Computing</p><a href="Sitesh\allcourses.html"><p class = "linkText">Go to courses</p></a></h2>
+  </div>
+  
+</div>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <p class = "info">
+      Cloud computing is the on-demand availability of computer system resources, especially data storage and computing power, without direct active management by the user. The term is generally used to describe data centers available to many users over the Internet. Large clouds, predominant today, often have functions distributed over multiple locations from central servers. If the connection to the user is relatively close, it may be designated an edge server.<br>
+
+      Clouds may be limited to a single organization (enterprise clouds), or be available to many organizations (public cloud).
+    </p>
+    <p class = "info">
+      Cloud computing relies on sharing of resources to achieve coherence and economies of scale.
+    </p>
+  </div>
+</div>
+
+</div>
+
+<!-- for data science -->
+
+<div class = "pathways">
+<div  class="row">
+  <div class="col-md-12 that">
+    <video autoplay autoplay muted loop height="400px" width="700px">
+    <source src="ds.mp4" type="video/mp4">
+    </video>
+
+    <h2 id = "dsHeader" class = "headers">Data <p> Science</p><a href="Sitesh\allcourses.html"><p class = "linkText">Go to courses</p></a></h2>
+  </div>
+  
+</div>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <p class = "info">
+      Data science is a multi-disciplinary field that uses scientific methods, processes, algorithms and systems to extract knowledge and insights from structured and unstructured data. Data science is the same concept as data mining and big data: "use the most powerful hardware, the most powerful programming systems, and the most efficient algorithms to solve problems".<br>
+
+      Data science is a "concept to unify statistics, data analysis, machine learning and their related methods" in order to "understand and analyze actual phenomena" with data. It employs techniques and theories drawn from many fields within the context of mathematics, statistics, computer science, and information science. Turing award winner Jim Gray imagined data science as a "fourth paradigm" of science (empirical, theoretical, computational and now data-driven) and asserted that "everything about science is changing because of the impact of information technology" and the data deluge. In 2015, the American Statistical Association identified database management, statistics and machine learning, and distributed and parallel systems as the three emerging foundational professional communities.
+    </p>
+    <p class = "info">
+      In 2012, when Harvard Business Review called it "The Sexiest Job of the 21st Century", the term "data science" became a buzzword. It is now often used interchangeably with earlier concepts like business analytics, business intelligence, predictive modeling, and statistics. Even the suggestion that data science is sexy was paraphrasing Hans Rosling, featured in a 2011 BBC documentary with the quote, "Statistics is now the sexiest subject around." Nate Silver referred to data science as a sexed up term for statistics. In many cases, earlier approaches and solutions are now simply rebranded as "data science" to be more attractive, which can cause the term to become "dilute beyond usefulness." While many university programs now offer a data science degree, there exists no consensus on a definition or suitable curriculum contents. To the discredit of the discipline, however, many data-science and big-data projects fail to deliver useful results, often as a result of poor management and utilization of resources.
+    </p>
+  </div>
+</div>
+
+</div>
+
+
+<div class="jumbotron" id = "faqs">
+  <h1>Frequently Asked Question, Just One</h1>
+  <h2>What to choose my engineering pathway</h2>
+  <h4>Well we are gonna answer that as per your interest:</h4>
+  <br>
+  <h4 class = "Question"> 1. Do you like maths? And robots? </h4>
+  <div><button class = "answers btn btn-outline-success good1">Yes</button> <button class = "answers btn btn-outline-danger bad1">NO</button></div>
+  <br>
+  <h4 class = "Question"> 2. Do you like making User Interface or making thing beautiful?</h4>
+<div><button class = "answers btn btn-outline-success good2  ">Yes</button> <button class = "answers btn btn-outline-danger  bad2">NO</button></div>  <br>
+  <h4 class = "Question"> 3. Wanna protect the internet and people's accounts from hackers and are fascinated by the thought of networks?</h4>
+<div><button class = "answers btn btn-outline-success good3">Yes</button> <button class = "answers btn btn-outline-danger bad3">NO</button></div>  <br>
+  <h4 class = "Question"> 4. Are you fascinated what the cloud is, not the blue one, but the one which is on the news lately? Wanna learn what every tech giant is storing it's data on and how?</h4>
+<div><button class = "answers btn btn-outline-success good4">Yes</button> <button class = "answers btn btn-outline-danger bad4">NO</button></div>   <br>
+<h4 class = "Question"> 5. Are you intereset about handling data or analysing it on day to day basis?</h4>
+<div><button class = "answers btn btn-outline-success good5">Yes</button> <button class = "answers btn btn-outline-danger bad5">NO</button></div>   <br>
+   <h2 class = "Question">We will suggest you a pathway based on the response. Click on the submit to know. </h2>
+   <h4 class = "Question"> Click reset to fill the form again.</h2>
+
+   <div><button class = "answers btn btn-success good6">Submit</button> <button class = "answers btn btn-warning bad6">Reset</button></div>
+   <div id = "pref">
+   <div id = "ml"><h1>You should choose Machine Learning</h1></div>
+   <div id = "ai"><h1>Go With Artificial Learning/h1></div>
+   <div id = "webDev"><h1>You should choose Web Development</h1></div>
+   <div id = "blockChain"><h1>Go For BlockChain</h1></div>
+   <div id = "cloudC"><h1>Surf on Cloud Computing</h1></div>
+   <div id = "dataScience"><h1>You should choose Data Science</h1></div>
+   </div>
+</div>
+
+<a href="#tmnav"><button id = "goTop"><i class="fas fa-arrow-up"></i></button></a>
+</body>
+</html>

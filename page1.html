@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> VisionQuest </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+  <link rel="stylesheet" href="page1.css">
+  <script src="page1.js"></script>
+</head>
+
+
+<body>
+
+
+<!-- Overlay -->
+<div id="overlay" onclick="off()">
+  <div id="text">
+    <center>
+    <p style="font-size: 50px;">Welcome to VisionQuest</p><p style="font-size: 40px;">(Your Vision, Our Mission)</p></center>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Fixed Icon Bar -->
+<div class="icon-bar">
+  <a href="https://www.facebook.com/AuthenticAmanDeep/" class="facebook"><i class="fab fa-facebook"></i></a> 
+  <a href="https://www.twitter.com/Sitesh221B/" class="twitter"><i class="fab fa-twitter"></i></a> 
+  <a href="#" class="google"><i class="fab fa-google"></i></a> 
+  <a href="https://www.linkedin.com/in/kajal-jain/" class="linkedin"><i class="fab fa-linkedin"></i></a>
+  <a href="" class="instagram"><i class="fab fa-instagram"></i></a> 
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" href="#"  onclick="on()"><img src="logo.jpg" width="50" height="30" class="d-inline-block align-top" alt="VisionQuest">
+  VisionQuest
+  </a>
+
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+       <a class="nav-link" href="#"><i class="fas fa-home" style='font-size:24px;color:#D80000;'></i>Home</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="career.html"><i class="fas fa-graduation-cap" style='font-size:24px;color:#D80000;'></i>Careers</a>
+      </li>
+      
+      <li class="nav-item active">
+        <a class="nav-link" href="Sitesh\allcourses.html"><i class="fas fa-book" style='font-size:24px;color:#D80000;'></i>Courses</a>
+      </li>
+
+      <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-sign-in-alt" style='font-size:24px;color:#D80000;'></i>Login</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="signup_page.html">Sign Up</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="login_page.html">Login</a>
+        </div>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="about.html"><i class="fas fa-user" style='font-size:24px;color:#D80000;'></i>About Us</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="contact.html"><i class="fas fa-phone-square" style='font-size:24px;color:#D80000;'></i>Contact Us</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Caraousel to add a slideshow -->
+<div id="slideshow" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false">
+  <div class="carousel-inner">
+    <div class="carousel-item active"  data-interval="3000">
+        <img src="ss1.png" class="d-block w-100">
+        <div class="carousel-caption text-left">
+          <p><b>Winter Training Program <br>2019-20<br></b>Registration Open</p>
+          <button type="button" id="btn1" class="btn btn-danger btn-md btn-radius" onclick="window.location='signup_page.html'"><span>Register </span></button>
+          
+        </div>
+    </div>
+    <div class="carousel-item"  data-interval="3000">
+      <img src="ss4.jpg" class="d-block w-100">
+      <div class="carousel-caption text-left">
+          <p><b>Winter Training Program <br>2019-20<br></b>Registration Open</p>
+          <button type="button" id="btn1" class="btn btn-danger btn-md btn-radius" onclick="window.location='signup_page.html'"><span>Register </span></button>
+          
+        </div>
+    </div>
+    <div class="carousel-item"  data-interval="3000">
+      <img src="ss1.jpg" class="d-block w-100">
+      <div class="carousel-caption text-left">
+        <p><b>Winter Training Program <br>2019-20<br></b>Registration Open</p>
+        <button type="button" id="btn1" class="btn btn-danger btn-md btn-radius" onclick="window.location='signup_page.html'"><span>Register </span></button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Division of details -->
+<div class="container pt-5">
+  <div class="row text-left">
+    <div class="col-sm-1"><i class="fas fa-rainbow pl-3" style='font-size:40px;color:#A00000;'></i></div>
+    <div class="col-sm-3">
+      <h5>5+ Years Experience</h5>
+      We strive to give our best.By offering industry best courses<br><br>
+    </div>
+
+    <div class="col-sm-1"><i class="fas fa-certificate pl-3" style='font-size:40px;color:#A00000;'></i></div>
+    <div class="col-sm-3">
+      <h5>International Certification</h5>
+      We summarise and present you industry best certifications with international affiliations<br><br>
+    </div>
+
+    <div class="col-sm-1"><i class="fas fa-handshake pl-3" style='font-size:40px;color:#A00000;'></i></div>
+    <div class="col-sm-3">
+      <h5>Courses For All</h5>
+      We Provide best courses for College Students and Corporates<br><br>
+    </div>
+  </div>
+
+  <div class="row text-left">
+    <div class="col-sm-1"><i class="fas fa-users pl-3" style='font-size:40px;color:#A00000;'></i></div>
+    <div class="col-sm-3">
+      <h5>Dedicated Team</h5>
+      With a Team of more than 50 Plus Technology Experts we stand apart from the competition<br><br>
+    </div>
+
+    <div class="col-sm-1"><i class="fas fa-laptop-code pl-3" style='font-size:40px;color:#A00000;'></i></div>
+    <div class="col-sm-3">
+      <h5>IT Courses</h5>
+      We carefully handpick the industry best and in demand technologies for our courses so that you stay ahead in your career<br><br>
+    </div>
+
+    <div class="col-sm-1"><i class="fas fa-hand-holding-usd pl-3" style='font-size:40px;color:#A00000;'></i></div>
+    <div class="col-sm-3"><h5>Programs for All Needs</h5>
+      We have divided seasonal time breaks to suit your learning needs<br><br>
+    </div>
+  </div>
+
+  <div class="row text-left">
+    <div class="col-sm-1"><i class="fas fa-history pl-3" style='font-size:40px;color:#A00000;'></i></div>
+    <div class="col-sm-3">
+      <h5>Lifetime Access</h5>
+      With the benefit of a lifetime access,you can learn on your schedule<br><br>
+    </div>
+
+    <div class="col-sm-1"><i class="fas fa-check-circle pl-3" style='font-size:40px;color:#A00000;'></i></div>
+    <div class="col-sm-3">
+      <h5>Expert Instructors</h5>
+      Find the right instructor for you with the help of a complete assessment of your preference from our careers tab<br><br>
+    </div>
+
+    <div class="col-sm-1"><i class="fas fa-tasks pl-3" style='font-size:40px;color:#A00000;'></i></div>
+    <div class="col-sm-3">
+      <h5>Various Categories</h5>
+      Explore a variety of fresh topics and learn new emerging technologies to keep up with the IT world<br><br>
+    </div>
+  </div>
+
+</div>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Section -->
+<div class="bgimg-1">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color:#fff;">TRANSFORMING YOUR CAREER FROM IDLE TO IDEAL</span>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Division of overview -->
+<div class="container pt-5 mt-5">
+  <div class="row">
+    <div class="col-sm-6 text-right p-5" id="col1">
+      <h5>ONLINE LIVE TRAINING PROGRAM</h5>
+      <p>In Live Online Training, you directly learn from and interact with a live expert instructor, the same as you would if you attended the physical classroom training.</p>
+    </div>
+
+    <div class="col-sm-6 text-left p-5" id="col2">
+      <h5>SUMMER TRAINING PROGRAM</h5>
+      <p>Summer Training Program provides you with a program rich in content, detailed in nature to fulfill even the most aspiring minds.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6 text-right p-5" id="col2">
+      <h5>WINTER TRAINING PROGRAM</h5>
+      <p>Winter Training Program is compact in nature and will help you in achieving numerous career objectives.<br><br><br></p>
+    </div>
+
+    <div class="col-sm-6 text-left p-5" id="col1">
+      <h5>PROJECT BASED INDUSTRIAL TRAINING PROGRAM</h5>
+      <p>Industry Training to meet the Industry requirements by the industry people.</p>
+    </div>
+  </div>
+
+</div>
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Company placards -->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <p style="color:grey; font-size:50px;" class="pt-4">Our Industry Partners and Tie-Ups!</p>
+      <hr class="w-100 pb-4">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front"><img src="microsoft.png" width="30%" height="100%"></div>
+          <div class="flip-box-back">MICROSOFT</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front"><img src="udemy.jpg" width="40%" height="100%"></div>
+          <div class="flip-box-back">UDEMY</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front"><img src="simplilearn.jpg" width="70%" height="100%"></div>
+          <div class="flip-box-back">SIMPLILEARN</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front"><img src="udacity.png" width="70%" height="100%"></div>
+          <div class="flip-box-back">UDACITY</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front"><img src="edx.png" width="40%" height="100%"></div>
+          <div class="flip-box-back">EdX</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front"><img src="gfg.jpg" width="30%" height="100%"></div>
+          <div class="flip-box-back">Geeks For Geeks</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-sm-2">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front"><img src="codingblocks.png" width="30%" height="100%"></div>
+          <div class="flip-box-back">CODING BLOCKS</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front"><img src="codingninjas.png" width="30%" height="100%"></div>
+          <div class="flip-box-back">CODING NINJAS</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front"><img src="board.png" width="70%" height="100%"></div>
+          <div class="flip-box-back">BOARD INFINITY</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front"><img src="upgrad.png" width="70%" height="100%"></div>
+          <div class="flip-box-back">UPGRAD</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front"><img src="coursera.jpg" width="40%" height="100%"></div>
+          <div class="flip-box-back">COURSERA</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front"><img src="datacamp.png" width="40%" height="100%"></div>
+          <div class="flip-box-back">DATACAMP</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Division of tabs -->
+<div class="container-fluid pt-5">
+  <div class="row" style="text-align: center; color:white;">
+    <div class="col-sm-4" style="background-color: black; padding: 60px;">
+      <i class="fas fa-book-open" style='font-size:40px;color:white;'></i><br>
+      <h5>COURSES</h5>
+      Select from specialized courses in fields such as Web Development, Data Science etc<br><br>
+      <button type="button" id="btn3a" class="btn btn-light btn-md btn-radius" onclick="window.location='Sitesh\\allcourses.html'">OUR COURSES</button>
+    </div>
+    <div class="col-sm-4" style="background-color: #A00000; padding: 60px;">
+      <i class="fas fa-graduation-cap" style='font-size:40px;color:white;'></i><br>
+      <h5>CAREERS</h5>
+      Confused what to do? We'll help you decide what, how and where to do?<br><br>
+      <button type="button" id="btn3b" class="btn btn-light btn-md btn-radius" onclick="window.location='career.html'">BROWSE CAREERS</button>
+    </div>
+    <div class="col-sm-4" style="background-color:grey; padding: 60px;">
+      <i class="fas fa-arrow-circle-right" style='font-size:40px;color:white;'></i><br>
+      <h5>REGISTRATION</h5>
+      Learn from the leaders. Register yourself or your friends and get great discounts<br><br>
+      <button type="button" id="btn3c" class="btn btn-light btn-md btn-radius" onclick="window.location='signup_page.html'">GET REGISTERED NOW</button>
+    </div>
+  </div>
+</div>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Section of recent and trending courses -->
+<div class="w3-container">
+  <center>
+  <div class="mt-5 w3-display-container" style="width:65%">
+    <!-- TabLinks -->
+    <div class="w3-bar w3-black mb-2">
+      <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Latest');"><i class="fas fa-book-reader w3-margin-right"></i>Recent Courses</button>
+      <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Trending');"><i class="fa fa-book w3-margin-right"></i>Trending Courses</button>
+      <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Upcoming');"><i class="fas fa-book-open w3-margin-right"></i>Upcoming Courses</button>
+    </div>
+
+    <!-- Tabs -->
+    <div id="Latest" class="w3-container w3-white w3-padding-16 myLink">
+      <div class="w3-row-padding card-deck">
+
+          <!-- Course 1 -->
+          <div class="card w3-card-4 w-100" style="min-width:100px">
+            <h6 class="card-title"><b><i>Cloud DevOps Engineer</i></b></h6>
+            <img class="card-img-top" src="devops.png" alt="Card image" style="width:85%">
+            <div class="card-body">
+              <h6 class="card-text"><b>Offered by Udacity</b></h6>
+              <p class="card-text">Skills Covered:AWS, Configuration Management with Anisble, Continuous</p>
+              <p><button class="btn btn-block btn-dark">Apply Now</button></p>
+            </div>
+          </div>
+
+          <!-- Course 2 -->
+          <div class="card w3-card-4 w-100" style="min-width:100px">
+            <h6 class="card-title"><b><i>iOS Engineer</i></b></h6>
+            <img class="card-img-top" src="ios.jpg" alt="Card image" style="width:85%">
+            <div class="card-body">
+              <h6 class="card-text"><b>Offered by Coursera</b></h6>
+              <p class="card-text">Skills Covered:Swift programming, Core Data, UIKit, iOS Networking & Development</p>
+              <p><button class="btn btn-block btn-dark">Apply Now</button></p>
+            </div>
+          </div>
+
+          <!-- Course 3 -->
+          <div class="card w3-card-4 w-100" style="min-width:100px">
+            <h6 class="card-title"><b><i>Deep Learning</i></b></h6>
+            <img class="card-img-top" src="deeplearning.jpg" alt="Card image" style="width:85%">
+            <div class="card-body">
+              <h6 class="card-text"><b>Offered by Udemy</b></h6>
+              <p class="card-text">Skills Covered:User Research, User Experience, Prototyping, Interactive Design</p>
+              <p><button class="btn btn-block btn-dark" onclick="window.location='MachineLearning/courses_MachineLearning_Udemy_DeepLearning.html'">Apply Now</button></p>
+            </div>
+          </div>
+
+      </div>
+    </div>
+
+
+
+
+    <div id="Trending" class="w3-container w3-white w3-padding-16 myLink">
+      <div class="w3-row-padding card-deck">
+
+          <!-- Course 1 -->
+          <div class="card w3-card-4 w-100">
+            <h6 class="card-title"><b><i>Front End Web Developer</i></b></h6>
+            <img class="card-img-top" src="web.jpeg" alt="Card image" style="width:85%">
+            <div class="card-body">
+              <h6 class="card-text"><b>Offered by Upgrad</b></h6>
+              <p class="card-text">Skills Covered: JavaScript, HTML, CSS, Webpack, Flexbox, Node, React</p>
+              <p><button class="btn btn-block btn-dark" onclick="window.location='FullStack/courses_FullStack_NodeJS.html'">Apply Now</button></p>
+            </div>
+          </div>
+
+          <!-- Course 2 -->
+          <div class="card w3-card-4 w-100">
+            <h6 class="card-title"><b><i>Data Streaming</i></b></h6>
+            <img class="card-img-top" src="datascience.jpg" alt="Card image" style="width:85%">
+            <div class="card-body">
+              <h6 class="card-text"><b>Offered by DataCamp</b></h6>
+              <p class="card-text">Skills Covered:Data Streaming, Spark, Kafka, Kafka Streaming, Spark Streaming</p>
+              <p><button class="btn btn-block btn-dark">Apply Now</button></p>
+            </div>
+          </div>
+
+          <!-- Course 3 -->
+          <div class="card w3-card-4 w-100">	
+            <h6 class="card-title"><b><i>Blockchain Developer</i></b></h6>
+            <img class="card-img-top" src="blockchain.png" alt="Card image" style="width:85%">
+            <div class="card-body">
+              <h6 class="card-text"><b>Offered by Udacity</b></h6>
+              <p class="card-text">Skills Covered:Ethereum Blockchain, Blockchain Architecture, Data Auditing</p>
+              <p><button class="btn btn-block btn-dark">Apply Now</button></p>
+            </div>
+          </div>
+
+      </div>
+    </div>
+
+
+    <div id="Upcoming" class="w3-container w3-white w3-padding-16 myLink">
+      <div class="w3-row-padding card-deck">
+
+          <!-- Course 1 -->
+          <div class="card w3-card-4 w-100">
+            <h6 class="card-title"><b><i>Ethical Hacking</i></b></h6>
+            <img class="card-img-top" src="hacking.jpg" alt="Card image" style="width:85%">
+            <div class="card-body">
+              <h6 class="card-text"><b>Offered by Udemy</b></h6>
+              <p class="card-text mb-5">Skills Covered:Metasploit, Aircrack-ng, SQLmap, ARP Spoofing/ARP Poisoning</p>
+            </div>
+          </div>
+
+          <!-- Course 2 -->
+          <div class="card w3-card-4 w-100">
+            <h6 class="card-title"><b><i>C++ Launchpad</i></b></h6>
+            <img class="card-img-top" src="algo.jpg" alt="Card image" style="width:85%">
+            <div class="card-body">
+              <h6 class="card-text"><b>Offered by Coding Blocks</b></h6>
+              <p class="card-text mb-5">Skills Covered:Linear/Non-linear DS and various algorithmic techniques</p>
+            </div>
+          </div>
+
+          <!-- Course 3 -->
+          <div class="card w3-card-4 w-100">
+            <h6 class="card-title"><b><i>Android Developer</i></b></h6>
+            <img class="card-img-top" src="android.png" alt="Card image" style="width:85%">
+            <div class="card-body">
+              <h6 class="card-text"><b>Offered by edX</b></h6>
+              <p class="card-text mb-5">Skills Covered:Android Development, Databases, Android Networking Libraries, Crash</p>
+            </div>
+          </div>
+
+      </div>
+    </div>
+
+
+  </div>
+</center>
+</div>
+
+
+<script>
+  // Click on the first tablink on load
+  document.getElementsByClassName("tablink")[0].click();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Testimonials -->
+<div class="container-fluid pt-5">
+
+  <div class="row text-center">
+    
+    <div class="col-sm-6">
+      <img src="student1.jpg" height=100% width=100%>
+    </div>
+
+    <div class="col-sm-6 text-white p-5" id="testimonials">
+      <div id="demo" class="carousel slide" data-ride="carousel">    
+        
+        <!-- The slideshow -->
+        <div class="carousel-inner text-center">
+          <div class="carousel-item active">
+            <img src="profile2.jpg" class="img rounded-circle w-25 h-25">
+            <center>
+              <p class="w-75 pt-4 text-left">"We run one of the biggest video content delivery platforms for US K-12 schools. Thanks to the API and branding we were able to extend our services and offer video conferencing and classrooms to our students. It’s opened up a whole new revenue stream. We’ve worked with VisionQuest for over 6 years and have absolutely no plans of leaving."<br></p>
+              <small>Andrew, M. USA</small>
+            </center>
+          </div>
+          <div class="carousel-item">
+            <img src="profile3.jpg" class="img rounded-circle w-25 h-25">
+            <center>
+              <p class="w-75 pt-4 text-left">We have a student body of over 12.000. We were Adobe Connect customers for years, until VisionQuest knocked on our door. We haven’t looked back. Our teachers love it and our tech team are enjoying the lack of overhead in integration since the licensing is open. We are very happy with the services and would recommend to anyone be it a student or an entreprise."<br></p>
+              <small>Jose, Mexico</small>
+            </center>
+          </div>
+          <div class="carousel-item">
+            <img src="profile1.jpg" class="img rounded-circle w-25 h-25">
+            <center>
+              <p class="w-75 pt-4 text-left">"When i had no idea of where my interest lies among all the IT fields, VisionQuest gave me answers to not just what to do but also to why, how and from where to do. I took up a training in Business Analytics. The training helped me a lot in learning HADOOP. We were provided by the best faculty. It satisfied our expectation from training. Faculty went through all the doubts and helps us at its best."<br></p>
+              <small>Ayush, IIT Delhi</small>
+            </center>
+          </div>
+        </div>
+        
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Image Gallery -->
+<div class="container pt-4">
+  <h1 class="font-weight-light text-center mt-4 mb-0">Photo Gallery</h1>
+  <hr class="mt-2 mb-5">
+
+  <div class="row text-center">
+    <div class="col-sm-3">
+      <a target="_blank" href="8.png"><img class="img-fluid img-thumbnail h-100 w-100 mb-5" src="8.png"></a>
+    </div>
+    <div class="col-sm-3">
+      <a target="_blank" href="2.jpg"><img class="img-fluid img-thumbnail h-100 w-100 mb-5" src="2.jpg"></a>
+    </div>
+    <div class="col-sm-3">
+      <a target="_blank" href="7.jpg"><img class="img-fluid img-thumbnail h-100 w-100 mb-5" src="7.jpg"></a>
+    </div>
+    <div class="col-sm-3">
+      <a target="_blank" href="5.jpg"><img class="img-fluid img-thumbnail h-100 w-100 mb-5" src="5.jpg"></a>
+    </div>
+    <div class="col-sm-3">
+      <a target="_blank" href="4.jpg"><img class="img-fluid img-thumbnail h-100 w-100 my-3" src="4.jpg"></a>
+    </div>
+    <div class="col-sm-3">
+      <a target="_blank" href="6.png"><img class="img-fluid img-thumbnail h-100 w-100 my-3" src="6.png"></a>
+    </div>
+    <div class="col-sm-3">
+      <a target="_blank" href="3.jpg"><img class="img-fluid img-thumbnail h-100 w-100 my-3" src="3.jpg"></a>
+    </div>
+    <div class="col-sm-3">
+      <a target="_blank" href="9.jpg"><img class="img-fluid img-thumbnail h-100 w-100 my-3" src="9.jpg"></a>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Section for join us-->
+<div class="container-fluid bgimg-2 mt-5">
+  <div class="row">
+    <div class="col caption2 my-5 text-center w-100">
+      <span class="border p-3 m-3" style="background-color:transparent;font-size:25px;color:#fff;letter-spacing:10px;">VISIONQUEST FOR ENTREPRISE</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-8 text-right pt-4">
+      <p class="h3 text-white">Bring your Entreprise into the family</p>
+      <p class="h4 text-white">Find out how VisionQuest can help you achieve your goals</p>
+    </div>
+    <div class="col-sm-4 text-left pt-5">
+     <button type="button" id="btnconnect" class="btn btn-danger btn-lg btn-radius" onclick="document.getElementById('id01').style.display='block'">CONNECT NOW</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Connect Now modal -->
+<div id="id01" class="modal text-center" tabindex="-1" >
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header" style="background-color:#000;color:white;">
+        <h3 class="modal-title"><i>BE A PART OF VISIONQUEST</i></h3>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <h5 class="modal-title py-3"><i>Expand your domain to infinite students</i></h5>
+        <input class="w-100 my-2" type="text" placeholder="Name of the Entreprise" name="name" onfocus="this.style.border='1px solid black'"onblur="this.style.border='1px solid grey'" id="modalname">
+        <input class="w-100 my-2" type="email" placeholder="E-mail" name="name" onfocus="this.style.border='1px solid black'" onblur="this.style.border='1px solid grey'" id="modalentreprise">  
+        <h5 class="modal-title py-3"><i>VisionQuest team</i></h5>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+              <button onclick="return modalsubmit()" type="button" class="btn btn-block" style="background-color:#181818;color:white;">SUBMIT</button>
+            </div>
+            <div class="col-md-6">
+              <button onclick="modaldismiss()" type="button" class="btn btn-block" style="background-color:#A00;color:white;">DISMISS</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="text-center text-white" style="background-color:black;">
+  <div class="container" style="text-align:left;">
+
+    <div class="row h6">
+      <div class="col text-center py-4">
+        <a href="#slideshow"><button class="btn btn-md p-2 m-2 w-15" style="color:#000;background-color:#ddd;"><i class="fa fa-arrow-up"></i>To the top</button></a>
+      </div>
+    </div>
+    <div class="row h6 text-white">
+      <div class="col-sm-4"><u>VISIONQUEST</u></div>
+      <div class="col-sm-4"><u>LINKS</u></div>
+      <div class="col-sm-4"><u>CONTACTS</u></div>
+    </div>
+
+    <div class="row" style="padding-top:20px;">
+
+       <!-- Location -->
+      <div class="col-sm-4 h6 text-white">
+        OFFICE LOCATION<br><br>
+        Lovely Professional University,Jalandhar-Delhi GT Road,144411<br>
+        Like Us!<i onclick="like(this)" class="pt-2 pl-2 fa fa-thumbs-up"></i>
+      </div>
+
+      <div class="col-sm-4" style="color:white;">
+        <nav class="text-uppercase">
+          <ul class="list-unstyled mb-0">
+            <li class="py-2" style="border-bottom:1px solid #ddd; cursor:pointer" onclick="window.location='about.html'">
+              <h4 class="h6 pr-20 mb-0">
+                <a class="text-white text-white" href="about.html">About Us</a>
+                <i class="fa fa-angle-right float-right" ></i>
+              </h4>
+            </li>
+            <li class="py-2" style="border-bottom:1px solid white; cursor:pointer" onclick="window.location='courses.html'">
+              <h4 class="h6 pr-20 mb-0">
+                <a class="text-white text-white" href="allcourses.html">Courses</a>
+                <i class="fa fa-angle-right float-right"></i>
+              </h4>
+            </li>
+            <li class="py-2" style="border-bottom:1px solid white; cursor:pointer" onclick="window.location='career.html'">
+              <h4 class="h6 pr-20 mb-0">
+                <a class="text-white text-white" href="career.html">Careers</a>
+                <i class="fa fa-angle-right float-right"></i>
+              </h4>
+            </li>
+            <li class="py-2" style="border-bottom:1px solid white; cursor:pointer" onclick="window.location='contact.html'">
+              <h4 class="h6 pr-20 mb-0">
+                <a class="text-white text-white" href="contact.html">Contact Us</a>
+                <i class="fa fa-angle-right float-right"></i>
+              </h4>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Contacts -->
+      <div class="col-sm-4 text-white">
+        <i class="fas fa-phone-square pb-3" style='font-size:24px;color:white;'></i>+91 9332200335<br>
+        <i class="fas fa-globe-asia pb-3" style='font-size:24px;color:white;'></i>query@visionquest.com<br>
+      </div>
+    </div>
+
+     <!-- Copyright -->
+    <div class="row mt-5 text-center">
+      <div class="col">
+        <p>Copyright 2019 &copy; VisionQuest. All Rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<!-- Feedback Box -->
+<button class="open-button btn btn-radius" onclick="openForm()">Feedback</button>
+
+<div class="chat-popup" id="myForm">
+  <form class="form-container">
+    <h1>Wanna Say Something?</h1>
+
+    <label for="msg"><b>Your feedback is valuable to us...</b></label>
+    <textarea id="query-text" placeholder="Type message.." name="msg" onfocus="this.value=''" required></textarea>
+
+    <button type="submit" class="btn" onclick="return closeFormAfterSend()">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>

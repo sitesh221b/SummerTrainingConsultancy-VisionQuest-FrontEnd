@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> ForgetPassword </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+      function checkValidity(){
+        var eMail = document.getElementById("eMail").value;
+
+        if(eMail == ""){
+          alert("Kindly fill up your email ID");
+          return false;
+        }
+
+        var pattern =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+         var ans =  pattern.test(eMail);  // test() is used for a match in a string
+                                          // ^ is used to denote the starting of string
+                                          // $ is used to denote the end of string
+        if(ans == false){
+            alert("You have entered an invalid email address!, kindly recheck");
+            return false;
+        }
+
+        alert("Password reset link has been sent to the given email ID");
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <a class="navbar-brand" href="page1.html"><img src="logo.jpg" width="50" height="30" class="d-inline-block align-top" alt="VisionQuest">
+      VisionQuest
+      </a>
+
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active" id="shift">
+           <a class="nav-link" href="page1.html"><i class="fas fa-home" style='font-size:24px;color:#D80000;'></i>Home</a>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link" href="career.html"><i class="fas fa-graduation-cap" style='font-size:24px;color:#D80000;'></i>Careers</a>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link " href="Sitesh\allcourses.html"><i class="fas fa-book" style='font-size:24px;color:#D80000;'></i>Courses</a>
+          </li>
+
+          <li class="nav-item active dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-sign-in-alt" style='font-size:24px;color:#D80000;'></i>Login</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="signup_page.html">Sign Up</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="login_page.html">Login</a>
+            </div>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link" href="about.html"><i class="fas fa-user" style='font-size:24px;color:#D80000;'></i>About Us</a>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link" href="contact.html"><i class="fas fa-phone-square" style='font-size:24px;color:#D80000;'></i>Contact Us</a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+    <!-- navbar ends -->
+
+
+    <!-- forget password starts -->
+
+    <div class="row">
+      <div class="col-md-12" style="color : white">Fill row space</div>
+    </div>
+    <div class="row">
+      <div class="col-md-12" style="color : white">Fill row space</div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+      </div>
+      <div class="col-md-4 mt-5 mr-1" id = "container">
+        <div class="ml-3 mt-4 border rounded">
+          <h2 class = "text-center pt-3" style = "font-family : Arial; font-weight : normal; color : #4b636e;">Reset Password</h2>
+          <p class = "text-muted mx-4 pt-3" style="font-size: 18px;">A password reset link will be sent to the following email id</p>
+          <div class="form-group mx-4">
+            <input type="text" class = "form-control" placeholder="Email" name = "Email" id = "eMail">
+            <div class="row">
+              <div class="col-md-1"></div>
+              <a href = "page1.html" class = "btn btn-danger button-block mt-3 mx-5 px-5" onclick="return checkValidity()">Start Now</a>
+              <!-- <button type = "button" class = "btn btn-danger button-block mt-3 mx-5 px-5" onclick="return checkValidity()">Send Password Reset Link</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+    <!-- forget password ends -->
+
+  </body>
+</html>

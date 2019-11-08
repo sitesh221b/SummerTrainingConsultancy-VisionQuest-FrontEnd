@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Sign Up Page </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- style starts -->
+      <style>
+        .bg-image{
+          background: url("aman.jpg");
+          color : #fff;
+          height: 700px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+        }
+
+        .color-overlay{
+          width: 100%;
+          height: 100%;
+          background-color: #000;
+          opacity: 0.7;
+          position: absolute;
+        }
+
+        .loginForm{
+          z-index: 1;
+        }
+
+        .entryBox1{
+          width: 100%;
+          overflow: hidden;
+          font-size: 20px;
+          border-bottom: 1px solid;
+        }
+
+        .entryBox2{
+          width: 100%;
+          overflow: hidden;
+          font-size: 20px;
+          border-bottom: 1px solid;
+        }
+
+        .entryBox1 input{
+          border : none;
+          outline: none;
+          background: none;
+          color : white;
+          font-size : 18px;
+          width : 80%;
+        }
+
+        .entryBox2 input{
+          border : none;
+          outline: none;
+          background: none;
+          color : white;
+          font-size : 18px;
+          width : 80%;
+        }
+
+      </style>
+
+      <script>
+        function checkValidity(){
+          var fname = document.getElementById("fname").value;
+          var lname = document.getElementById("lname").value;
+          var username = document.getElementById("username").value;
+          var eMail = document.getElementById("eMail").value;
+          var pwd1 = document.getElementById("pwd1").value;
+          var pwd2 = document.getElementById("pwd2").value;
+
+          if(fname == ""){
+            alert("Please fill up your first name");
+            return false;
+          }
+
+          if(lname == ""){
+            alert("Please fill up your last name");
+            return false;
+          }
+
+          if(username == ""){
+            alert("Please fill up your username name");
+            return false;
+          }
+
+
+          if(eMail == ""){
+            alert("Kindly fill up your email ID");
+            return false;
+          }
+
+          var pattern =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            var ans =  pattern.test(eMail);  // test() is used for a match in a string
+                                            // ^ is used to denote the starting of string
+                                            // $ is used to denote the end of string
+
+          if(ans == false){
+              alert("You have entered an invalid email address!, kindly recheck");
+              return false;
+          }
+          
+
+          if(pwd1 == ""){
+            alert("Please fill up your password");
+            return false;
+
+          }
+
+          if(pwd1.length < 8){
+            alert("Minimum length of password is 8");
+            return false;
+          }
+
+          if(pwd2 == ""){
+            alert("Please confirm your password");
+            return false;
+          }
+
+          if(pwd1 != pwd2){
+            alert("Password don't match, kindly recheck")
+            return false;
+          }
+
+
+          alert("Form submitted!");
+          return true;
+        }
+      </script>
+
+      <!-- style ends -->
+  </head>
+  <body>
+
+    <!-- Navbar starts-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <a class="navbar-brand" href="page1.html"><img src="logo.jpg" width="50" height="30" class="d-inline-block align-top" alt="VisionQuest">
+      VisionQuest
+      </a>
+
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active" id="shift">
+           <a class="nav-link" href="page1.html"><i class="fas fa-home" style='font-size:24px;color:#D80000;'></i>Home</a>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link" href="career.html"><i class="fas fa-graduation-cap" style='font-size:24px;color:#D80000;'></i>Careers</a>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link " href="Sitesh\allcourses.html"><i class="fas fa-book" style='font-size:24px;color:#D80000;'></i>Courses</a>
+          </li>
+
+          <li class="nav-item active dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-sign-in-alt" style='font-size:24px;color:#D80000;'></i>Login</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="signup_page.html">Sign Up</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="login_page.html">Login</a>
+            </div>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link" href="about.html"><i class="fas fa-user" style='font-size:24px;color:#D80000;'></i>About Us</a>
+          </li>
+
+          <li class="nav-item active">
+            <a class="nav-link" href="contact.html"><i class="fas fa-phone-square" style='font-size:24px;color:#D80000;'></i>Contact Us</a>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+    <!-- navbar ends -->
+
+
+    <!-- Sign Up form starts -->
+
+    <div class="bg-image">
+      <div class="col-md-3 loginForm">
+        <h1 class = "text-center mb-4">Sign Up</h1>
+        <div class = "FullName">
+          <div class = "entryBox1 pt-1 pb-2 pl-2">
+            <input type="text" placeholder="First Name" id = "fname">
+          </div>
+          <span>
+            <div class = "entryBox1 pt-2 py-1 pl-2">
+              <input type="text" placeholder="Last Name" id = "lname">
+            </div>
+          </span>
+        </div>
+        <div class = "entryBox2 pt-2 py-1 pl-2">
+          <input type="text" placeholder="Username" id = "username">
+        </div>
+        <div class = "entryBox2 pt-2 py-1 pl-2">
+          <input type="text" placeholder="Email" id = "eMail">
+        </div>
+        <div class = "entryBox2 pt-2 py-1 pl-2">
+          <input type="password" placeholder="Password" id = "pwd1">
+        </div>
+        <div class = "entryBox2 pt-2 py-1 mb-2 pl-2">
+          <input type="password" placeholder="Confirm Password" id = "pwd2">
+        </div>
+        <a href = "page1.html" class = "btn btn-outline-danger btn-block mt-4 mb-2" onclick="return checkValidity()">Start Now</a>
+        <span class = "ml-auto mr-2">Have an account?</span><a href="login_page.html" style = "text-decoration: none;">Log in</a>
+      </div>
+      <div class="color-overlay"></div>
+    </div>
+
+    <!-- Sign Up form ends -->
+
+  </body>
+</html>

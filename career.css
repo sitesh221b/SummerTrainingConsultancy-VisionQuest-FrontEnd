@@ -1,0 +1,132 @@
+#parentClass{
+	position: relative;
+}
+
+.fiesta{
+	top:30%;
+	left: 45%;
+    width: 250px;
+	position: absolute;
+}
+
+#show{
+	background-color: green;
+	width: 200px;
+	border-radius: 30px;
+	height: 50px;
+	font-size: 20px;
+}
+
+#hidden{
+	top: 40%;
+	left: 45%;
+	position: absolute;
+}
+#know{
+	background-color: red;
+}
+
+#decide{
+	margin-top: 20px;
+	background-color: orange;
+}
+#know, #decide{
+	height: 60px;
+	width: 200px;
+	border-radius: 20px;
+}
+
+.innerText{
+	color : white;
+	opacity: 0.9;
+}
+
+#pathHeader{
+	font-family: 'Bowlby One SC', cursive;
+    color: #eb345e;
+    padding-top: 15px;
+    padding-left: 15px;
+    font-size: 80px;
+}
+
+.Blocks{
+  height: 275px;
+}
+
+.sub{
+  padding: 40px;
+  width: 400px;
+  height: 200px;
+  margin-left: 40px;
+  background-color: #f59520;
+  position: relative;
+}
+
+.theId{
+  top:40%;
+  left: 25%;
+  position: absolute;
+  color: white;
+  font-family: 'Staatliches', cursive;
+  font-size: 25px;
+}
+
+.row{
+	margin-top: 50px;
+	margin-left: 50px;
+}
+
+
+video{
+	margin-left: 50%;
+}
+
+.that{
+	position: relative;
+}
+
+
+.headers{
+	font-family: 'Bowlby One SC', cursive;
+    color: #eb345e;
+    top:10%;
+    position: absolute;
+    font-size: 65px;
+}
+
+.info{
+	color: #733511;
+	font-size: 17px;
+}
+
+.linkText{
+	font-size: 45px;
+}
+
+.Question{
+	font-family: 'Rokkitt', serif;
+}
+
+.Answers{
+	font-family: 'Gudea', sans-serif;
+
+}
+
+#goTop{
+	position: fixed;
+	top: 90%;
+	right: 3%;
+	height: 50px;
+	width: 50px;
+	background-color: #9e7ea8;
+	border-radius: 10px;
+}
+
+.answers{
+	margin-left: 15px;
+}
+
+#pref{
+	margin-top: 30px;
+	font-family: 'Bowlby One SC', cursive;
+}
