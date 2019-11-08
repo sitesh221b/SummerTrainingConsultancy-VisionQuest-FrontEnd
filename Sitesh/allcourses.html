@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> VisionQuest </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="styleCourses.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" href="..\page1.html"><img src="logo.jpg" width="50" height="30" class="d-inline-block align-top" alt="VisionQuest">
+  VisionQuest
+  </a>
+
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active" id="shift">
+       <a class="nav-link" href="..\page1.html"><i class="fas fa-home" style='font-size:24px;color:#D80000;'></i>Home</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="..\career.html"><i class="fas fa-graduation-cap" style='font-size:24px;color:#D80000;'></i>Careers</a>
+      </li>
+      
+      <li class="nav-item active">
+        <a class="nav-link" href="allcourses.html"><i class="fas fa-book" style='font-size:24px;color:#D80000;'></i>Courses</a>
+        <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Web Development</a>
+          <a class="dropdown-item" href="#">Data Science</a>
+          <a class="dropdown-item" href="#">Machine Learning</a>
+          <a class="dropdown-item" href="#">Data Structures</a>
+          <a class="dropdown-item" href="#">Other</a>
+        </div> -->
+      </li>
+
+      <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-sign-in-alt" style='font-size:24px;color:#D80000;'></i>Login</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="..\signup_page.html">Sign Up</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="..\login_page.html">Login</a>
+        </div>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="..\about.html"><i class="fas fa-user" style='font-size:24px;color:#D80000;'></i>About Us</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="..\contact.html"><i class="fas fa-phone-square" style='font-size:24px;color:#D80000;'></i>Contact Us</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+
+<!-- ================================================================================================================================================================================= -->
+
+
+<div class="container-fluid">
+  <div class="filters mb-0 mt-5">
+    Filter By:
+    <div class="dropdown mt-3 mb-3" id="domains">
+      <button class="btn btn-secondary dropdown-toggle status-domain" data-toggle="dropdown" type="button">
+        Domain
+      </button>
+      <div class="dropdown-menu dropdown-domain">
+        <a class="dropdown-item" onclick="filterFields('all',0)">All</a>
+        <a class="dropdown-item" onclick="filterFields('datastructures',0)">Data Structures</a>
+        <a class="dropdown-item" onclick="filterFields('datascience',0)">Data Science</a>
+        <a class="dropdown-item" onclick="filterFields('fullstack',0)">Full Stack</a>
+        <a class="dropdown-item" onclick="filterFields('ml',0)">Machine Learning</a>
+      </div>
+    </div>
+
+    <div class="dropdown mt-3 mb-3" id="company">
+      <button class="btn btn-secondary dropdown-toggle status-company" data-toggle="dropdown" type="button">
+        Company
+      </button>
+      <div class="dropdown-menu dropdown-company">
+        <a class="dropdown-item" onclick="filterFields('all',1)">All</a>
+        <a class="dropdown-item" onclick="filterFields('udacity',1)">Udacity</a>
+        <a class="dropdown-item" onclick="filterFields('edx',1)">Edx</a>
+        <a class="dropdown-item" onclick="filterFields('udemy',1)">Udemy</a>
+        <a class="dropdown-item" onclick="filterFields('coursera',1)">Coursera</a>
+      </div>
+    </div>
+
+    <div class="mt-3 mb-3 ml-3" id="price-range">
+      <input type="number" id="min" placeholder=" Minimum Price" min="0">
+      <input type="number" id="max" placeholder=" Maximum Price" min="0">
+    </div>
+
+    <div class="btn-group mt-3 mb-3">
+      <button type="button" id="filter-button" class="btn btn-danger">Filter</button>
+      <button type="button" id="filter-clear-button" class="btn btn-danger">Clear</button>
+    </div>
+  </div>
+
+  <div class="sorting">
+    Sort By:&nbsp;
+    <div class="dropdown mt-3 mb-3 ml-3" id="names">
+      <button class="btn btn-secondary dropdown-toggle status-name" data-toggle="dropdown" type="button">
+        Name
+      </button>
+      <div class="dropdown-menu dropdown-name">
+        <a class="dropdown-item" id="sort1" onclick="sortFields('az')">A-Z</a>
+        <a class="dropdown-item" id="sort2" onclick="sortFields('za')">Z-A</a>
+      </div>
+    </div>
+
+    <div class="dropdown mt-3 mb-3 ml-3" id="price-field">
+      <button class="btn btn-secondary dropdown-toggle status-price-field" data-toggle="dropdown" type="button">
+        Price
+      </button>
+      <div class="dropdown-menu dropdown-price-field">
+        <a class="dropdown-item" onclick="sortFields('lh')">Low to High</a>
+        <a class="dropdown-item" onclick="sortFields('hl')">High to Low</a>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div ng-app="">
+    <div class="input-group mt-5 mb-4">
+      <input type="text" id="search-course" ng-model="x" placeholder="Search your desiring course...">
+      <div class="input-group-append">
+        <span class="input-group-text" style="color: #d9534f;"><i class="fa fa-search fa-lg"></i></span>
+      </div>
+    </div>
+  
+    <div class="results">
+      <h3>Showing results for: {{x}}</h3>
+    </div>
+  </div>
+
+  <div class="courses mt-5">
+    <ul id="course-head">
+      <li class="course-list" id="c1">
+        <a href="..\FullStack\courses_FullStack_NodeJs.html" class="course-link">
+          <div id="card1" class="fullstack udacity card text-white course-card" style="width: 28em">
+              <img src="web.png" alt="" class="card-img">
+              <div class="card-img-overlay">
+                <h3 class="card-title mt-3 mb-0" style="font-weight: bold;">Full Stack Development with NodeJS</h3>
+                <p class="card-text author-card"><small>Created by:&nbsp;&nbsp;&nbsp;Joseph Philips</small></p>
+                <p class="card-text company-card">Udactiy</p>
+                <div class="rating-box mt-2">
+                  <p class="card-text rating">
+                    <small>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                    </small>
+                    (27,192)
+                  </p>
+                </div>
+                <div class="price-box mt-0">
+                  <h3 class="card-text price text-right">₹5,400</h3>
+                </div>
+              </div>
+          </div>
+        </a>
+      </li>
+      <li class="course-list" id="c2">
+        <a href="..\MachineLearning\courses_MachineLearning_CourseEra1.html" class="course-link">
+          <div id="card2" class="ml coursera card text-white course-card" style="width: 28em">
+              <img src="ml.png" alt="" class="card-img">
+              <div class="card-img-overlay">
+                <h2 class="card-title mt-3 mb-0" style="font-weight: bold;">Machine Learning</h2>
+                <p class="card-text author-card"><small>Created by:&nbsp;&nbsp;&nbsp;Stanford University</small></p>
+                <p class="card-text company-card">Coursera</p>
+                <div class="rating-box">
+                  <p class="card-text rating mt-4">
+                    <small>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star-half-alt" style="color: gold"></i>
+                    </small>
+                    (29,127)
+                  </p>
+                </div>
+                <div class="price-box mt-4">
+                  <h3 class="card-text price text-right">₹4,178</h3>
+                </div>
+              </div>
+          </div>
+        </a>
+      </li>
+      <li class="course-list" id="c3">
+        <a href="..\DataScience\courses_DataScience_coursera1.html" class="course-link">
+          <div id="card3" class="datascience coursera card text-white course-card" style="width: 28em">
+              <img src="datascience.png" alt="" class="card-img">
+              <div class="card-img-overlay">
+                <h2 class="card-title mt-3 mb-0" style="font-weight: bold;">IBM Data Science Professional Certificate</h2>
+                <p class="card-text author-card"><small>Created by:&nbsp;&nbsp;&nbsp;IBM</small></p>
+                <p class="card-text company-card">Coursera</p>
+                <div class="rating-box">
+                  <p class="card-text rating mt-1">
+                    <small>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star-half-alt" style="color: gold"></i>
+                    </small>
+                    (8,817)
+                  </p>
+                </div>
+                <div class="price-box mt-0">
+                  <h3 class="card-text price text-right">₹16,500</h3>
+                </div>
+              </div>
+          </div>
+        </a>
+      </li>
+      <li class="course-list" id="c4">
+        <a href="..\FullStack\courses_FullStack_React&Django.html" class="course-link">
+          <div id="card4" class="fullstack udemy card text-white course-card" style="width: 28em">
+              <img src="web.png" alt="" class="card-img">
+              <div class="card-img-overlay">
+                <h3 class="card-title mt-3 mb-0" style="font-weight: bold;">Full Stack Development (React & Django)</h3>
+                <p class="card-text author-card"><small>Created by:&nbsp;&nbsp;&nbsp;Krystian Czekalski</small></p>
+                <p class="card-text company-card">Udemy</p>
+                <div class="rating-box mt-3">
+                  <p class="card-text rating">
+                    <small>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star fas-star-half-alt" style="color: gold"></i>
+                    </small>
+                    (130)
+                  </p>
+                </div>
+                <div class="price-box mt-2">
+                  <h3 class="card-text price text-right">₹3,200</h3>
+                </div>
+              </div>
+          </div>
+        </a>
+      </li>
+      <li class="course-list" id="c5">
+        <a href="..\MachineLearning\courses_MachineLearning_Udemy2.html" class="course-link">
+          <div id="card5" class="ml udemy card text-white course-card" style="width: 28em">
+              <img src="ml.png" alt="" class="card-img">
+              <div class="card-img-overlay">
+                <h3 class="card-title mt-3 mb-0" style="font-weight: bold;">Machine Learning, Data Science & Deep Learning using Python</h3>
+                <p class="card-text author-card"><small>Created by:&nbsp;&nbsp;&nbsp;Sun Dog Education by Frank Kane</small></p>
+                <p class="card-text company-card">Udemy</p>
+                <div class="rating-box">
+                  <p class="card-text rating mt-1">
+                    <small>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star-half-alt" style="color: gold"></i>
+                    </small>
+                    (16,931)
+                  </p>
+                </div>
+                <div class="price-box mt-0">
+                  <h3 class="card-text price text-right">₹12,160</h3>
+                </div>
+              </div>
+          </div>
+        </a>
+      </li>
+      <li class="course-list" id="c6">
+        <a href="..\DataScience\courses_DataScience_coursera2.html" class="course-link">
+          <div id="card6" class="datascience coursera card text-white course-card" style="width: 28em">
+              <img src="datascience.png" alt="" class="card-img">
+              <div class="card-img-overlay">
+                <h2 class="card-title mt-3 mb-0" style="font-weight: bold;">Applied Data Science with Python Specilization</h2>
+                <p class="card-text author-card"><small>Created by:&nbsp;&nbsp;&nbsp;University of Michigan</small></p>
+                <p class="card-text company-card">Coursera</p>
+                <div class="rating-box">
+                  <p class="card-text rating mt-1">
+                    <small>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star-half-alt" style="color: gold"></i>
+                    </small>
+                    (4,855)
+                  </p>
+                </div>
+                <div class="price-box mt-0">
+                  <h3 class="card-text price text-right">₹21,000</h3>
+                </div>
+              </div>
+          </div>
+        </a>
+      </li>
+      <li class="course-list" id="c7">
+        <a href="..\FullStack\courses_FullStack_Angular&Django.html" class="course-link">
+          <div id="card7" class="fullstack udemy card text-white course-card" style="width: 28em">
+              <img src="web.png" alt="" class="card-img">
+              <div class="card-img-overlay">
+                <h3 class="card-title mt-3 mb-0" style="font-weight: bold;">Full Stack Development (Angular, Django)</h3>
+                <p class="card-text author-card"><small>Created by:&nbsp;&nbsp;&nbsp;Krystian Czekalski</small></p>
+                <p class="card-text company-card">Udemy</p>
+                <div class="rating-box mt-3">
+                  <p class="card-text rating">
+                    <small>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star fas-star-half-alt" style="color: gold"></i>
+                    </small>
+                    (259)
+                  </p>
+                </div>
+                <div class="price-box mt-2">
+                  <h3 class="card-text price text-right">₹6,400</h3>
+                </div>
+              </div>
+          </div>
+        </a>
+      </li>
+      <li class="course-list" id="c8">
+        <a href="..\MachineLearning\courses_MachineLearning_Udemy1.html" class="course-link">
+          <div id="card8" class="ml udemy card text-white course-card" style="width: 28em">
+              <img src="ml.png" alt="" class="card-img">
+              <div class="card-img-overlay">
+                <h2 class="card-title mt-3 mb-0" style="font-weight: bold;">Machine Learning using Python & R in Data Science</h2>
+                <p class="card-text author-card"><small>Created by:&nbsp;&nbsp;&nbsp;Kirill Eremenko, Hadelin de Ponteves, DataScience Team</small></p>
+                <p class="card-text company-card">Udemy</p>
+                <div class="rating-box">
+                  <p class="card-text rating mt-1">
+                    <small>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star-half-alt" style="color: gold"></i>
+                    </small>
+                    (96,730)
+                  </p>
+                </div>
+                <div class="price-box mt-0">
+                  <h3 class="card-text price text-right">₹12,800</h3>
+                </div>
+              </div>
+          </div>
+        </a>
+      </li>
+      <li class="course-list" id="c9">
+        <a href="..\FullStack\courses_FullStack_FullStack_Web_Development_with_React_Specialization.html" class="course-link">
+          <div id="card9" class="fullstack coursera card text-white course-card" style="width: 28em">
+              <img src="web.png" alt="" class="card-img">
+              <div class="card-img-overlay">
+                <h3 class="card-title mt-3 mb-0" style="font-weight: bold;">FullStack Web Development with React Specialization</h3>
+                <p class="card-text author-card"><small>Created by:&nbsp;&nbsp;&nbsp;Hong Kong University</small></p>
+                <p class="card-text company-card">Coursera</p>
+                <div class="rating-box mt-4">
+                  <p class="card-text rating">
+                    <small>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star fas-star-half-alt" style="color: gold"></i>
+                    </small>
+                    (692)
+                  </p>
+                </div>
+                <div class="price-box mt-3">
+                  <h3 class="card-text price text-right">₹12,000</h3>
+                </div>
+              </div>
+          </div>
+        </a>
+      </li>
+      <li class="course-list" id="c10">
+        <a href="..\MachineLearning\courses_MachineLearning_Udemy_DeepLearning.html" class="course-link">
+          <div id="card10" class="ml udemy card text-white course-card" style="width: 28em">
+              <img src="ml.png" alt="" class="card-img">
+              <div class="card-img-overlay">
+                <h2 class="card-title mt-3 mb-0" style="font-weight: bold;">Deep Learning: Hands-on Artificial Neural Networks</h2>
+                <p class="card-text author-card"><small>Created by:&nbsp;&nbsp;&nbsp;Kirill Eremenko, Hadelin de Ponteves, DataScience Team</small></p>
+                <p class="card-text company-card">Udemy</p>
+                <div class="rating-box">
+                  <p class="card-text rating mt-1">
+                    <small>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star-half-alt" style="color: gold"></i>
+                    </small>
+                    (24,909)
+                  </p>
+                </div>
+                <div class="price-box mt-0">
+                  <h3 class="card-text price text-right">₹12,800</h3>
+                </div>
+              </div>
+          </div>
+        </a>
+      </li>
+      <li class="course-list" id="c11">
+        <a href="..\DataScience\courses_DataScience_udemy1.html" class="course-link">
+          <div id="card11" class="datascience udemy card text-white course-card" style="width: 28em">
+              <img src="datascience.png" alt="" class="card-img">
+              <div class="card-img-overlay">
+                <h2 class="card-title mt-3 mb-0" style="font-weight: bold;">Complete Data Science Bootcamp</h2>
+                <p class="card-text author-card"><small>Created by:&nbsp;&nbsp;&nbsp;365 Careers Team</small></p>
+                <p class="card-text company-card">Udemy</p>
+                <div class="rating-box">
+                  <p class="card-text rating mt-1">
+                    <small>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star-half-alt" style="color: gold"></i>
+                    </small>
+                    (34,232)
+                  </p>
+                </div>
+                <div class="price-box mt-0">
+                  <h3 class="card-text price text-right">₹12,800</h3>
+                </div>
+              </div>
+          </div>
+        </a>
+      </li>
+      <li class="course-list" id="c12">
+        <a href="..\DataScience\courses_DataScience_udemy2.html" class="course-link">
+          <div id="card12" class="datascience udemy card text-white course-card" style="width: 28em">
+              <img src="datascience.png" alt="" class="card-img">
+              <div class="card-img-overlay">
+                <h2 class="card-title mt-3 mb-0" style="font-weight: bold;">Data Science & Machine Learning using Python</h2>
+                <p class="card-text author-card"><small>Created by:&nbsp;&nbsp;&nbsp;Jitesh Khurkhuriya</small></p>
+                <p class="card-text company-card">Udemy</p>
+                <div class="rating-box">
+                  <p class="card-text rating mt-1">
+                    <small>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star" style="color: gold"></i>
+                      <i class="fas fa-star-half-alt" style="color: gold"></i>
+                    </small>
+                    (122)
+                  </p>
+                </div>
+                <div class="price-box mt-0">
+                  <h3 class="card-text price text-right">₹12,800</h3>
+                </div>
+              </div>
+          </div>
+        </a>
+      </li> 
+    </ul>
+  </div>
+</div>
+
+<script>
+  $('.results').hide();
+
+  var mpDomain = {
+    "all": "All",
+    "fullstack": "Full Stack",
+    "ml": "Machine Learning",
+    "datascience": "Data Science",
+    "datastructures": "Data Structures"
+};
+var mpCompany = {
+    "all": "All",
+    "udemy": "Udemy",
+    "udacity": "Udacity",
+    "coursera": "Coursera",
+    "edx": "Edx"
+};
+  
+let courses = document.querySelectorAll('div.course-card');
+var clist = document.getElementsByClassName('course-list');
+let domainCode = "all";
+let companyCode = "all";
+
+function filterFields(code,index){
+  if(index == 0){
+    document.getElementsByClassName('status-domain')[0].textContent = mpDomain[code];
+    domainCode = code;
+  }
+  else if(index == 1){
+    document.getElementsByClassName('status-company')[0].textContent = mpCompany[code];
+    companyCode = code;
+  }
+}
+
+$('#filter-button').on('click', function(){
+  var minval = document.getElementById('min').value;
+  var maxval = document.getElementById('max').value;
+  if(minval != ""){
+    var check = minval.toString();
+    for(let i=0; i<check.length; i++)
+      if(check[i] < '0' || check[i] > '9'){
+        alert('Invalid Minimum Value');
+        return false;
+      }
+  }
+  if(maxval != ""){
+    var check = minval.toString();
+    for(let i=0; i<check.length; i++)
+      if(check[i] < '0' || check[i] > '9'){
+        alert('Invalid Maximum Value');
+        return false;
+      }
+  }
+  var clist = document.getElementsByClassName('course-list');
+  for(let i=0; i<courses.length; i++){
+    var arr = courses[i].className.split(" ");
+    var cost = courses[i].getElementsByClassName('price')[0].textContent;
+    cost = cost.replace('₹','');
+    cost = parseInt(cost.replace(',',''));
+    var x = courses[i].id;
+    var h = clist[i].id;
+    if(domainCode != "all" && companyCode != "all"){
+      if(minval != "" && maxval != ""){
+        if(arr[0] == domainCode && arr[1] == companyCode && cost >= minval && cost <= maxval){
+          $("#"+x).show(300);
+          $("#"+h).show(300);
+        }
+        else
+          $("#"+h).hide(300);
+      }
+      else if(minval != ""){
+        if(arr[0] == domainCode && arr[1] == companyCode && cost >= minval)
+          $("#"+h).show(300);
+        else
+          $("#"+h).hide(300);
+      }
+      else if(maxval != ""){
+        if(arr[0] == domainCode && arr[1] == companyCode && cost <= maxval)
+          $("#"+h).show(300);
+        else
+          $("#"+h).hide(300);
+      }
+      else{
+        if(arr[0] == domainCode && arr[1] == companyCode)
+          $("#"+h).show(300);
+        else
+          $("#"+h).hide(300);
+      }
+    }
+    else if(domainCode != "all"){
+      if(minval != "" && maxval != ""){
+        if(arr[0] == domainCode && cost >= minval && cost <= maxval)
+          $("#"+h).show(300);
+        else
+          $("#"+h).hide(300);
+      }
+      else if(minval != ""){
+        if(arr[0] == domainCode && cost >= minval)
+          $("#"+h).show(300);
+        else
+          $("#"+h).hide(300);
+      }
+      else if(maxval != ""){
+        if(arr[0] == domainCode && cost <= maxval)
+          $("#"+h).show(300);
+        else
+          $("#"+h).hide(300);
+      }
+      else{
+        if(arr[0] == domainCode){
+          // $("#"+x).show(300);
+          $("#"+h).show(300);
+        }
+        else{
+          // $("#"+x).hide(300);
+          $("#"+h).hide(300);
+        }
+      }
+    }
+    else if(companyCode != "all"){
+      if(minval != "" && maxval != ""){
+        if(arr[1] == companyCode && cost >= minval && cost <= maxval)
+          $("#"+h).show(300);
+        else
+          $("#"+h).hide(300);
+      }
+      else if(minval != ""){
+        if(arr[1] == companyCode && cost >= minval)
+          $("#"+h).show(300);
+        else
+          $("#"+h).hide(300);
+      }
+      else if(maxval != ""){
+        if(arr[1] == companyCode && cost <= maxval)
+          $("#"+h).show(300);
+        else
+          $("#"+h).hide(300);
+      }
+      else{
+        if(arr[1] == companyCode)
+          $("#"+h).show(300);
+        else
+          $("#"+h).hide(300);
+      }
+    }
+    else{
+      if(minval != "" && maxval != ""){
+        if(cost >= minval && cost <= maxval)
+          $("#"+h).show(300);
+        else
+          $("#"+h).hide(300);
+      }
+      else if(minval != ""){
+        if(cost >= minval)
+          $("#"+h).show(300);
+        else
+          $("#"+h).hide(300);
+      }
+      else if(maxval != ""){
+        if(cost <= maxval)
+          $("#"+h).show(300);
+        else
+          $("#"+h).hide(300);
+      }
+      else{
+          $("#"+h).show(300);
+      }
+    }
+  }
+});
+
+function sortFields(code){
+  if(code == 'az'){
+    document.getElementsByClassName('status-name')[0].textContent = "A-Z";
+    document.getElementsByClassName('status-price-field')[0].textContent = "Price";
+    sortName(0);
+  }
+  else if(code == 'za'){
+    document.getElementsByClassName('status-name')[0].textContent = "Z-A";
+    document.getElementsByClassName('status-price-field')[0].textContent = "Price";
+    sortName(1);
+  }
+  else if(code == 'lh'){
+    document.getElementsByClassName('status-price-field')[0].textContent = "Low to High";
+    document.getElementsByClassName('status-name')[0].textContent = "Name";
+    sortPrice(0);
+  }
+  else{  
+    document.getElementsByClassName('status-price-field')[0].textContent = "High to Low";
+    document.getElementsByClassName('status-name')[0].textContent = "Name";
+    sortPrice(1);
+  }
+}
+
+function sortName(rev){
+  var i, swap, shouldSwitch;
+  let ul = document.getElementById('course-head');
+  swap = true;
+  while (swap) {
+    swap = false;
+    li = ul.getElementsByClassName('course-list');
+    for (i = 0; i < (li.length - 1); i++) {
+      shouldSwitch = false;
+      var a = li[i].getElementsByClassName('card-title')[0];
+      var b = li[i+1].getElementsByClassName('card-title')[0];
+      if(rev == 0){
+        if (a.innerHTML.toLowerCase() > b.innerHTML.toLowerCase()) {
+          shouldSwitch = true;
+          break;
+        }
+      }
+      else{
+        if (a.innerHTML.toLowerCase() < b.innerHTML.toLowerCase()) {
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      li[i].parentNode.insertBefore(li[i + 1], li[i]);
+      swap = true;
+    }
+  }
+}
+
+function sortPrice(rev){
+  var ul = document.getElementById('course-head');
+  var swap = true;
+  var shouldSwitch,i;
+  while(swap){
+    swap = false;
+    li = ul.getElementsByClassName('course-list');
+    for(i=0; i<(li.length-1); i++){
+      shouldSwitch = false;
+      var a = li[i].getElementsByClassName('price')[0].textContent;
+      var b = li[i+1].getElementsByClassName('price')[0].textContent;
+      a = a.replace('₹','');
+      b = b.replace('₹','');
+      a = parseInt(a.replace(',',''));
+      b = parseInt(b.replace(',',''));
+      if(rev){
+        if(a < b){
+          shouldSwitch = true;
+          break;
+        }
+      }
+      else{
+        if(a > b){
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if(shouldSwitch){
+      li[i].parentNode.insertBefore(li[i+1],li[i]);
+      swap = true;
+    }
+  }
+}
+
+$('#filter-clear-button').on('click',function(){
+  document.getElementsByClassName('status-domain')[0].textContent = "Domain";
+  document.getElementsByClassName('status-company')[0].textContent = "Company";
+  document.getElementById('min').value = "";
+  document.getElementById('max').value = "";
+
+  for(let i=0; i<courses.length; i++)
+    $("#"+clist[i].id).show(300);
+});
+
+$('#search-course').keyup(function(){
+  let searchtext = document.getElementById('search-course').value.toUpperCase();
+  let ul = document.getElementById('course-head');
+  let li = ul.getElementsByClassName('course-list');
+
+  if(searchtext.length == 0)
+    $(".results").hide();
+  else
+    $(".results").show();
+
+
+  for(let i=0; i<li.length; i++){
+    let a = li[i].getElementsByClassName('card-title')[0];
+    // let b = li[i].getElementsByClassName('course-card')[0];
+    if(a.innerHTML.toUpperCase().indexOf(searchtext) > -1){
+      $("#"+li[i].id).show(300);
+    }
+    else{
+      $("#"+li[i].id).hide(300);
+    }
+  }
+
+});
+
+</script>
+
+</body>
+</html>
