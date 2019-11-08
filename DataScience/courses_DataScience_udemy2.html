@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> VisionQuest </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script>
+  var v = [1,1,1,1,1,1,1,1,1,1];
+
+    $(document).ready(function(){
+      $("#ch1").click(function(){
+        $("#page1").slideToggle("slow");
+        $("#plus1").toggleClass("fa fa-minus");
+        v[1] ^= 1;
+      });
+    });
+
+    $(document).ready(function(){
+      $("#ch2").click(function(){
+        $("#page2").slideToggle("slow");
+        $("#plus2").toggleClass("fa fa-minus");
+        v[2] ^= 1;
+      });
+    });
+
+    $(document).ready(function(){
+      $("#ch3").click(function(){
+        $("#page3").slideToggle("slow");
+        $("#plus3").toggleClass("fa fa-minus");
+        v[3] ^= 1;
+      });
+    });
+
+    $(document).ready(function(){
+      $("#ch4").click(function(){
+        $("#page4").slideToggle("slow");
+        $("#plus4").toggleClass("fa fa-minus");
+        v[4] ^= 1;
+      });
+    });
+
+    $(document).ready(function(){
+      $("#ch5").click(function(){
+        $("#page5").slideToggle("slow");
+        $("#plus5").toggleClass("fa fa-minus");
+        v[5] ^= 1;
+      });
+    });
+
+    $(document).ready(function(){
+      $("#ch6").click(function(){
+        $("#page6").slideToggle("slow");
+        $("#plus6").toggleClass("fa fa-minus");
+        v[6] ^= 1;
+      });
+    });
+
+    $(document).ready(function(){
+      $("#ch7").click(function(){
+        $("#page7").slideToggle("slow");
+        $("#plus7").toggleClass("fa fa-minus");
+        v[7] ^= 1;
+      });
+    });
+
+    $(document).ready(function(){
+      $("#ch8").click(function(){
+        $("#page8").slideToggle("slow");
+        $("#plus8").toggleClass("fa fa-minus");
+        v[8] ^= 1;
+      });
+    });
+
+    var allClose = 1;
+    $(document).ready(function(){
+      $("#all").click(function(){
+        if(allClose == 1){
+            $("#page1").slideDown("slow");
+            $("#page2").slideDown("slow");
+            $("#page3").slideDown("slow");
+            $("#page4").slideDown("slow");
+            $("#page5").slideDown("slow");
+            $("#page6").slideDown("slow");
+            $("#page7").slideDown("slow");
+            $("#page8").slideDown("slow");
+
+            if(v[1]){
+              $("#plus1").toggleClass("fa fa-minus");
+              v[1] ^= 1;
+            }
+
+            if(v[2]){
+              $("#plus2").toggleClass("fa fa-minus");
+              v[2] ^= 1;
+            }
+
+            if(v[3]){
+              $("#plus3").toggleClass("fa fa-minus");
+              v[3] ^= 1;
+            }
+
+            if(v[4]){
+              $("#plus4").toggleClass("fa fa-minus");
+              v[4] ^= 1;
+            }
+
+            if(v[5]){
+              $("#plus5").toggleClass("fa fa-minus");
+              v[5] ^= 1;
+            }
+
+            if(v[6]){
+              $("#plus6").toggleClass("fa fa-minus");
+              v[6] ^= 1;
+            }
+
+            if(v[7]){
+              $("#plus7").toggleClass("fa fa-minus");
+              v[7] ^= 1;
+            }
+
+            if(v[8]){
+              $("#plus8").toggleClass("fa fa-minus");
+              v[8] ^= 1;
+            }
+
+            allClose = 0;
+            $("#all").html("<small>Collapse all</small>");
+        }
+        else{
+          $("#page1").slideUp("slow");
+          $("#page2").slideUp("slow");
+          $("#page3").slideUp("slow");
+          $("#page4").slideUp("slow");
+          $("#page5").slideUp("slow");
+          $("#page6").slideUp("slow");
+          $("#page7").slideUp("slow");
+          $("#page8").slideUp("slow");
+          allClose = 1;
+
+          if(v[1] == 0){
+            $("#plus1").toggleClass("fa fa-minus");
+            v[1] ^= 1;
+          }
+
+          if(v[2] == 0){
+            $("#plus2").toggleClass("fa fa-minus");
+            v[2] ^= 1;
+          }
+
+          if(v[3] == 0){
+            $("#plus3").toggleClass("fa fa-minus");
+            v[3] ^= 1;
+          }
+
+          if(v[4] == 0){
+            $("#plus4").toggleClass("fa fa-minus");
+            v[4] ^= 1;
+          }
+
+          if(v[5] == 0){
+            $("#plus5").toggleClass("fa fa-minus");
+            v[5] ^= 1;
+          }
+
+          if(v[6] == 0){
+            $("#plus6").toggleClass("fa fa-minus");
+            v[6] ^= 1;
+          }
+
+          if(v[7] == 0){
+            $("#plus7").toggleClass("fa fa-minus");
+            v[7] ^= 1;
+          }
+
+          if(v[8] == 0){
+            $("#plus8").toggleClass("fa fa-minus");
+            v[8] ^= 1;
+          }
+
+          $("#all").html("<small>Expand all</small>");
+        }
+      });
+    });
+
+
+  </script>
+
+  <style>
+    #ch1{
+      padding : 5px;
+      text-align : center;
+      background-color : #e5eecc;
+      border : solid 1px #c3c3c3;
+    }
+
+    #page1{
+      background-color : #e5eecc;
+      border : solid 1px #c3c3c3;
+      display : none;
+    }
+
+    #ch2{
+      padding : 5px;
+      text-align : center;
+      background-color : #e5eecc;
+      border : solid 1px #c3c3c3;
+    }
+
+    #page2{
+      background-color : #e5eecc;
+      border : solid 1px #c3c3c3;
+      display : none;
+    }
+
+    #ch3{
+      padding : 5px;
+      text-align : center;
+      background-color : #e5eecc;
+      border : solid 1px #c3c3c3;
+    }
+
+    #page3{
+      background-color : #e5eecc;
+      border : solid 1px #c3c3c3;
+      display : none;
+    }
+
+    #ch4{
+      padding : 5px;
+      text-align : center;
+      background-color : #e5eecc;
+      border : solid 1px #c3c3c3;
+    }
+
+    #page4{
+      background-color : #e5eecc;
+      border : solid 1px #c3c3c3;
+      display : none;
+    }
+
+    #ch5{
+      padding : 5px;
+      text-align : center;
+      background-color : #e5eecc;
+      border : solid 1px #c3c3c3;
+    }
+
+    #page5{
+      background-color : #e5eecc;
+      border : solid 1px #c3c3c3;
+      display : none;
+    }
+
+    #ch6{
+      padding : 5px;
+      text-align : center;
+      background-color : #e5eecc;
+      border : solid 1px #c3c3c3;
+    }
+
+    #page6{
+      background-color : #e5eecc;
+      border : solid 1px #c3c3c3;
+      display : none;
+    }
+
+    #ch7{
+      padding : 5px;
+      text-align : center;
+      background-color : #e5eecc;
+      border : solid 1px #c3c3c3;
+    }
+
+    #page7{
+      background-color : #e5eecc;
+      border : solid 1px #c3c3c3;
+      display : none;
+    }
+
+    #ch8{
+      padding : 5px;
+      text-align : center;
+      background-color : #e5eecc;
+      border : solid 1px #c3c3c3;
+    }
+
+    #page8{
+      background-color : #e5eecc;
+      border : solid 1px #c3c3c3;
+      display : none;
+    }
+
+    .card-img-top{
+      height: 8vw;
+    }
+
+  </style>
+
+
+</head>
+
+<body>
+
+<!-- Navbar starts-->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" href="page1.html"><img src="DataScienceImages\logo.jpg" width="50" height="30" class="d-inline-block align-top" alt="VisionQuest">
+  VisionQuest
+  </a>
+
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active" id="shift">
+       <a class="nav-link" href="page1.html"><i class="fas fa-home" style='font-size:24px;color:#D80000;'></i>Home</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="..\career.html"><i class="fas fa-graduation-cap" style='font-size:24px;color:#D80000;'></i>Careers</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link " href="Sitesh/allcourses.html"><i class="fas fa-book" style='font-size:24px;color:#D80000;'></i>Courses</a>
+      </li>
+
+      <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-sign-in-alt" style='font-size:24px;color:#D80000;'></i>Login</a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="signup_page.html">Sign Up</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="login_page.html">Login</a>
+        </div>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="about.html"><i class="fas fa-user" style='font-size:24px;color:#D80000;'></i>About Us</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="contact.html"><i class="fas fa-phone-square" style='font-size:24px;color:#D80000;'></i>Contact Us</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+<!-- navbar ends -->
+
+<!-- courses and its stream -->
+  <section id = "a1" class="text-center bg-light mb-0">
+    <ul class = "breadcrumb pl-3 pt-0 pb-0 m-0">
+      <li class = "breadcrumb-item"><a href="#" style = "text-decoration : none;" class = "text-danger">Courses</a></li>
+      <li class="breadcrumb-item">Data Science</li>
+      <li class="breadcrumb-item active">Data Science and Machine Learning using Python</li>
+    </ul>
+  </section>
+<!-- courses and its stream ends -->
+
+<!-- course name and ratings -->
+  <section id = "a2" class="text-center pt-5 pb-5 bg-dark text-white">
+    <h1 class = "text-white pl-5 pr-5 pt-5 pb-2 mb-1">Data Science and Machine Learning using Python</h1>
+    <i class="fas fa-star mt-1" style = "color : gold"></i>
+    <i class="fas fa-star mt-1" style = "color : gold"></i>
+    <i class="fas fa-star mt-1" style = "color : gold"></i>
+    <i class="fas fa-star mt-1" style = "color : gold"></i>
+    <i class="fas fa-star-half-alt" style = "color : gold"></i>
+    <span class = "mr-2"><small>4.6 (122 ratings)</small></span>
+    <span><small>1,318 students enrolled</small></span>
+    <p class = "p-0 m-0"><small>Created by <i>Jitesh Khurkhuriya</i></small></p>
+    <small><i class="fas fa-comment"></i><span class = "ml-1">English</span><i class="fas fa-closed-captioning ml-2"></i><span class = "ml-1">English, French, Spanish</span></small>
+  </section>
+<!-- course name and ratings end -->
+
+
+
+
+<div class="container-fluid mt-4">
+  <div class="row">
+    <h1 class="bg-white col-md-3"></h1>
+    <div class="col-md-6">
+      <!-- what you'll learn section starts -->
+      <div class="row pl-3 pr-2">
+        <div class = "col-md-12 border rounded" style = "background-color: #e5eecc;">
+          <h6 class="text-muted mt-3 mb-4">WHAT YOU WILL LEARN</h6>
+          <div class = "row">
+            <div class="col-md-6">
+              <p><i class="fas fa-check mr-3"></i>Learn Complete Data Science skillset required to be a Data Scientist with all the advance concepts</p>
+              <p><i class="fas fa-check mr-3 pd-3"></i>Learn complete Mathematics of Linear Algebra, Calculus, Vectors, Matrices for Data Science and Machine Learning.</p>
+              <p><i class="fas fa-check mr-3"></i>Impress interviewers by showing an understanding of the data science field</p>
+            </div>
+            <div class="col-md-6">
+              <p><i class="fas fa-check mr-3"></i>Master Python Programming from Basics to advance as required for Data Science and Machine Learning</p>
+              <p><i class="fas fa-check mr-3"></i>Become an expert in Statistics including Descriptive and Inferential Statistics.</p>
+              <p><i class="fas fa-check mr-3"></i>Unfold the power of deep neural networks</p>
+                <p><i class="fas fa-check mr-3"></i>Start coding in Python and learn how to use it for statistical analysis</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- what you'll learn section ends-->
+
+      <!-- skills you'll gain starts-->
+      <div class="row  pl-3 pr-2">
+        <div class="col-md-12 border rounded mt-4">
+          <h6 class="text-muted mt-3 mb-4">SKILLS YOU WILL GAIN</h6>
+          <div class="continer pb-4">
+            <button type="button" class = "btn btn-secondary disabled mr-4 mt-1" style = "border-radius : 1.875rem;">Data Science</button>
+            <button type="button" class = "btn btn-secondary disabled mr-4 mt-1" style = "border-radius : 1.875rem;">Machine Learning</button>
+            <button type="button" class = "btn btn-secondary disabled mr-4 mt-1" style = "border-radius : 1.875rem;">Python Programming</button>
+            <button type="button" class = "btn btn-secondary disabled mr-4 mt-1" style = "border-radius : 1.875rem;">Data Analysis</button>
+            <button type="button" class = "btn btn-secondary disabled mr-4 mt-1" style = "border-radius : 1.875rem;">Data Visualization (DataViz)</button>
+          </div>
+        </div>
+      </div>
+    <!-- skills you'll gain ends-->
+
+    <!-- pre-requisites starts -->
+
+    <div class="row">
+      <div class = "col-md-12 mt-4">
+      <h4 class="col-md-6 mx-4 pl-0 display-4">Pre-requisites</h4>
+        <li class = "lead">No prior experience is required. We will start from the very basics</li>
+        <li class = "lead">You’ll need to install Anaconda. We will show you how to do that step by step</li>
+        <li class = "lead">Microsoft Excel 2003, 2010, 2013, 2016, or 365</li>
+      </div>
+    </div>
+
+    <!-- pre-requisites ends -->
+
+    <!-- Course content starts -->
+
+      <div class="row">
+        <div class = "col-md-12 mt-4">
+        <h3 class = "mb-2">Course Content<span class="ml-2" id = "all" style="cursor: pointer;"><small>Expand all</small></span></h3>
+          <div id="ch1" style="cursor: pointer;"><small><i class="fas fa-plus float-left pl-3 mt-1" id = "plus1"></i></small>Introduction</div>
+          <div id="page1">
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Introduction to this course</span><span class="badge badge-primary badge-pill">01:42</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Additional free content</span><span class="badge badge-primary badge-pill">00:12</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Introducing our TA</span><span class="badge badge-primary badge-pill">01:43</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Join the online community</span><span class="badge badge-primary badge-pill">00:48</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Why this course</span><span class="badge badge-primary badge-pill">07:48</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Syllabus Walkthrough</span><span class="badge badge-primary badge-pill">09:40</span></li>
+            </ul>
+          </div>
+
+          <div id="ch2" class = "mt-1" style="cursor: pointer;"><small><i class="fas fa-plus float-left pl-3 mt-1" id = "plus2"></i></small>The Various Data Science Disciplines</div>
+          <div id="page2">
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Section Intro: Installing and Exploring Node.js</span><span class="badge badge-primary badge-pill">00:56</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Installing Node.js and Visual Studio Code</span><span class="badge badge-primary badge-pill">08:12</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>What is Node.js?</span><span class="badge badge-primary badge-pill">15:31</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Why Should I Use Node.js?</span><span class="badge badge-primary badge-pill">16:24</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Your First Node.js Script</span><span class="badge badge-primary badge-pill">06:19</span></li>
+            </ul>
+          </div>
+
+          <div id="ch3" class = "mt-1" style="cursor: pointer;"><small><i class="fas fa-plus float-left pl-3 mt-1" id = "plus3"></i></small>Connecting the Data Science Disciplines</div>
+          <div id="page3">
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Section Intro: Node.js Module System</span><span class="badge badge-primary badge-pill">01:03</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Importing Node.js Core Modules </span><span class="badge badge-primary badge-pill">16:28</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Importing Your Own Files</span><span class="badge badge-primary badge-pill">16:35</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Importing npm Modules</span><span class="badge badge-primary badge-pill">16:57</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Printing in Color</span><span class="badge badge-primary badge-pill">14:23</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Global npm Modules and nodemon</span><span class="badge badge-primary badge-pill">07:22</span></li>
+            </ul>
+          </div>
+
+          <div id="ch4" class = "mt-1" style="cursor: pointer;"><small><i class="fas fa-plus float-left pl-3 mt-1" id = "plus4"></i></small>The Benefits of Each Discipline</div>
+          <div id="page4">
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Section Intro: File System and Command Line Args</span><span class="badge badge-primary badge-pill">00:55</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Getting Input from Users</span><span class="badge badge-primary badge-pill">09:45</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Argument Parsing with Yargs: Part I</span><span class="badge badge-primary badge-pill">15:21</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Argument Parsing with Yargs: Part II</span><span class="badge badge-primary badge-pill">11:21</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Storing Data with JSON</span><span class="badge badge-primary badge-pill">17:51</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Adding a Note</span><span class="badge badge-primary badge-pill">18:33</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Removing a Note</span><span class="badge badge-primary badge-pill">14:59</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>ES6 Aside: Arrow Functions</span><span class="badge badge-primary badge-pill">14:14</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Refactoring to Use Arrow Functions</span><span class="badge badge-primary badge-pill">14:31</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Listing Notes</span><span class="badge badge-primary badge-pill">05:30</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Reading a Note</span><span class="badge badge-primary badge-pill">11:50</span></li>
+            </ul>
+          </div>
+
+          <div id="ch5" class = "mt-1" style="cursor: pointer;"><small><i class="fas fa-plus float-left pl-3 mt-1" id = "plus5"></i></small>Popular Data Science Techniques</div>
+          <div id="page5">
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Section Intro: Debugging Node.js</span><span class="badge badge-primary badge-pill">01:32</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Debugging Node.js</span><span class="badge badge-primary badge-pill">15:23</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Error Messages</span><span class="badge badge-primary badge-pill">04:53</span></li>
+            </ul>
+          </div>
+
+          <div id="ch6" class = "mt-1" style="cursor: pointer;"><small><i class="fas fa-plus float-left pl-3 mt-1" id = "plus6"></i></small>Popular Data Science Tools</div>
+          <div id="page6">
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Section Intro: Asynchronous Node.js </span><span class="badge badge-primary badge-pill">01:14</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Asynchronous Basics</span><span class="badge badge-primary badge-pill">08:00</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Call Stack, Callback Queue, and Event Loop</span><span class="badge badge-primary badge-pill">18:14</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Making HTTP Requests</span><span class="badge badge-primary badge-pill">14:50</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Customizing HTTP Requests</span><span class="badge badge-primary badge-pill">18:26</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>An HTTP Request Challenge</span><span class="badge badge-primary badge-pill">18:31</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Handling Errors</span><span class="badge badge-primary badge-pill">17:33</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Callback Abstraction</span><span class="badge badge-primary badge-pill">16:18</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Callback Abstraction Challenge</span><span class="badge badge-primary badge-pill">18:53</span></li>
+            </ul>
+          </div>
+
+          <div id="ch7" class = "mt-1" style="cursor: pointer;"><small><i class="fas fa-plus float-left pl-3 mt-1" id = "plus7"></i></small>Careers in Data Science</div>
+          <div id="page7">
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Section Intro: Web Servers</span><span class="badge badge-primary badge-pill">01:40</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Hello Express!</span><span class="badge badge-primary badge-pill">18:21</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Serving up HTML and JSON</span><span class="badge badge-primary badge-pill">07:03</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Serving up Static Assets</span><span class="badge badge-primary badge-pill">14:49</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Dynamic Pages with Templating</span><span class="badge badge-primary badge-pill">11:30</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Customizing the Views Directory</span><span class="badge badge-primary badge-pill">20:04</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Advanced Templating</span><span class="badge badge-primary badge-pill">07:26</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>404 Pages</span><span class="badge badge-primary badge-pill">16:24</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Styling the Application: Part I</span><span class="badge badge-primary badge-pill">14:01</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Styling the Application: Part II</span><span class="badge badge-primary badge-pill">16:56</span></li>
+            </ul>
+          </div>
+
+          <div id="ch8" class = "mt-1" style="cursor: pointer;"><small><i class="fas fa-plus float-left pl-3 mt-1" id = "plus8"></i></small>Debunking Common Misconceptions</div>
+          <div id="page8">
+            <ul class="list-group border rounded">
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Section Intro: Databases and Advanced Asynchronous Development</span><span class="badge badge-primary badge-pill">01:09</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>MongoDB and NoSQL Databases</span><span class="badge badge-primary badge-pill">08:06</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Installing MongoDB on macOS and Linux</span><span class="badge badge-primary badge-pill">08:10</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Installing MongoDB on Windows</span><span class="badge badge-primary badge-pill">08:30</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Installing Database GUI Viewer</span><span class="badge badge-primary badge-pill">06:54</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Connecting and Inserting Documents</span><span class="badge badge-primary badge-pill">19:18</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Inserting Documents</span><span class="badge badge-primary badge-pill">16:42</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>The ObjectID</span><span class="badge badge-primary badge-pill">15:13</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Querying Documents</span><span class="badge badge-primary badge-pill">17:12</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Promises</span><span class="badge badge-primary badge-pill">18:03</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Updating Documents</span><span class="badge badge-primary badge-pill">16:06</span></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center"><span><i class = "fa fa-play-circle float-left mr-2 pt-1"></i>Deleting Documents</span><span class="badge badge-primary badge-pill">07:46</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    <!-- Course content ends -->
+
+    <!-- testimonials starts -->
+      <div class="row">
+
+      </div>
+    <!-- testimonials ends -->
+
+    <!-- stdudents also bought starts -->
+
+    <div class="row">
+      <div class = "col-md-12 mt-4">
+      <h4 class="pl-0 py-2">Students also bought</h4>
+        <div class="card-deck">
+            <div class="card">
+              <img src="DataScienceImages\image2.jpg" alt="DataScience" class="card-img-top">
+              <div class="card-body">
+                <h6 class="card-title mb-0">IBM Data Science Professional Certificate</h6>
+                <p class="card-text text-muted mt-0 mb-0"><small>IBM</small></p>
+                <p class="card-text text-muted mt-0"><small><i>Course from Coursera</i></small></p>
+                <small>
+                  <i class="fas fa-star mt-1" style = "color : gold"></i>
+                  <i class="fas fa-star mt-1" style = "color : gold"></i>
+                  <i class="fas fa-star mt-1" style = "color : gold"></i>
+                  <i class="fas fa-star mt-1" style = "color : gold"></i>
+                  <i class="fas fa-star-half-alt" style = "color : gold"></i>
+                </small>
+                <span class = "mr-2"><small>4.7 (8,817)</small></span>
+                <a href="courses_DataScience_coursera1.html" class="btn btn-outline-danger mt-2" style = "border-radius : 1.875rem">See Course</a>
+              </div>
+            </div>
+            <div class="card">
+              <img src="DataScienceImages\image3.png" alt="DataScience" class="card-img-top">
+              <div class="card-body">
+                <h6 class="card-title mb-0">Applied Data Science with Python Specialization</h6>
+                <p class="card-text text-muted mt-0 mb-0"><small>University of Michigan</small></p>
+                <p class="card-text text-muted mt-0"><small><i>Course from Coursera</i></small></p>
+                <small>
+                  <i class="fas fa-star mt-1" style = "color : gold"></i>
+                  <i class="fas fa-star mt-1" style = "color : gold"></i>
+                  <i class="fas fa-star mt-1" style = "color : gold"></i>
+                  <i class="fas fa-star mt-1" style = "color : gold"></i>
+                <i class="fas fa-star-half-alt" style = "color : gold"></i>
+                </small>
+                <span class = "mr-2"><small>4.5 (4,855)</small></span>
+                <a href="courses_DataScience_coursera2.html" class="btn btn-outline-danger mt-2" style = "border-radius : 1.875rem">See Course</a>
+              </div>
+            </div>
+            <div class="card">
+              <img src="DataScienceImages\image1.jpg" alt="DataScience" class="card-img-top">
+              <div class="card-body">
+                <h6 class="card-title mb-0">Complete Data Science Bootcamp</h6>
+                <p class="card-text text-muted mt-0 mb-0"><small><i>365 Careers, 365 Careers Team</i></small></p>
+                <p class="card-text text-muted mt-0"><small><i>Course from Udemy</i></small></p>
+                <small>
+                  <i class="fas fa-star mt-1" style = "color : gold"></i>
+                  <i class="fas fa-star mt-1" style = "color : gold"></i>
+                  <i class="fas fa-star mt-1" style = "color : gold"></i>
+                  <i class="fas fa-star mt-1" style = "color : gold"></i>
+                  <i class="fas fa-star-half-alt" style = "color : gold"></i>
+                </small>
+                <span class = "mr-2"><small>4.5 (34,232)</small></span>
+                <a href="courses_DataScience_udemy1.html" class="btn btn-outline-danger mt-2" style = "border-radius : 1.875rem">See Course</a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- stdudents also bought ends -->
+
+    <!-- student feedback starts -->
+
+    <div class="container">
+    <div class="row">
+      <div class = "col-md-12 mt-4 bg-primary"></div>
+        <h3>Student feedback</h3>
+    </div>
+      <div class="row">
+        <div class="col-md-3">
+          <p class = "display-4 mb-0 ml-4 pl-3">4.6</p>
+          <small class = "ml-4 pl-1">
+            <i class="fas fa-star mt-1" style = "color : gold"></i>
+            <i class="fas fa-star mt-1" style = "color : gold"></i>
+            <i class="fas fa-star mt-1" style = "color : gold"></i>
+            <i class="fas fa-star mt-1" style = "color : gold"></i>
+            <i class="fas fa-star-half-alt" style = "color : gold"></i>
+          </small>
+          <p class = "ml-4">Course rating</p>
+        </div>
+        <div class="col-md-6">
+          <div class="progress mt-2">
+            <div class="progress-bar bg-secondary" style="width : 62%"></div>
+          </div>
+          <div class="progress mt-2">
+            <div class="progress-bar bg-secondary" style="width : 27%"></div>
+          </div>
+          <div class="progress mt-2">
+            <div class="progress-bar bg-secondary" style="width : 7%"></div>
+          </div>
+          <div class="progress mt-2">
+            <div class="progress-bar bg-secondary" style="width : 2%"></div>
+          </div>
+          <div class="progress mt-2">
+            <div class="progress-bar bg-secondary" style="width : 2%"></div>
+          </div>
+        </div>
+        <div class="col-md-3" id = "starsPercentage">
+          <small>
+            <i class="fas fa-star mt-1" style = "color : gold"></i>
+            <i class="fas fa-star mt-1" style = "color : gold"></i>
+            <i class="fas fa-star mt-1" style = "color : gold"></i>
+            <i class="fas fa-star mt-1" style = "color : gold"></i>
+            <i class="fas fa-star mt-1" style = "color : gold"></i>
+          </small>
+          <span><small>62%</small></span>
+          <br>
+          <small>
+            <i class="fas fa-star mt-1" style = "color : gold"></i>
+            <i class="fas fa-star mt-1" style = "color : gold"></i>
+            <i class="fas fa-star mt-1" style = "color : gold"></i>
+            <i class="fas fa-star mt-1" style = "color : gold"></i>
+            <i class="far fa-star mt-1"></i>
+          </small>
+          <span><small>27%</small></span>
+          <br>
+          <small>
+            <i class="fas fa-star mt-1" style = "color : gold"></i>
+            <i class="fas fa-star mt-1" style = "color : gold"></i>
+            <i class="fas fa-star mt-1" style = "color : gold"></i>
+            <i class="far fa-star mt-1"></i>
+            <i class="far fa-star mt-1"></i>
+          </small>
+          <span class = "ml-1"><small> 7%</small></span>
+          <br>
+          <small>
+            <i class="fas fa-star mt-1" style = "color : gold"></i>
+            <i class="fas fa-star mt-1" style = "color : gold"></i>
+            <i class="far fa-star mt-1"></i>
+            <i class="far fa-star mt-1"></i>
+            <i class="far fa-star mt-1"></i>
+          </small>
+          <span class = "ml-1"><small> 2%</small></span>
+          <br>
+          <small>
+            <i class="fas fa-star mt-1" style = "color : gold"></i>
+            <i class="far fa-star mt-1"></i>
+            <i class="far fa-star mt-1"></i>
+            <i class="far fa-star mt-1"></i>
+            <i class="far fa-star mt-1"></i>
+          </small>
+          <span><small class = "ml-1"> 2%</small></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- student feeback ends -->
+
+  <!-- FAQs starts -->
+  <div class="container mt-4">
+    <h1 class="text-center">Frequently Asked Questions</h1>
+    <hr>
+    <div class="row">
+      <div class="col-md-6">
+        <div id = "accordion">
+          <div class = "card">
+            <div class = "card-header" id = "heaingOne">
+              <h5 class="mb-0">
+                <a data-toggle="collapse" data-parnet="#accordion" href="#collapseOne" style="text-decoration : none;">What is the refund policy?</a>
+              </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse">
+              <div class="card-body">
+                If you subscribed, you get a 30-day free trial during which you can cancel at no penalty. After that, we don’t give refunds, but you can cancel your subscription at any time.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="heaingOne">
+              <h5 class="mb-0">
+                <a data-toggle="collapse" data-parnet="#accordion" href="#collapseTwo" style="text-decoration : none;">Is financial aid available?</a>
+              </h5>
+            </div>
+
+            <div id="collapseTwo" class="collapse">
+              <div class="card-body">
+                No, financial aid is not available for this course.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="heaingOne">
+              <h5 class="mb-0">
+                <a data-toggle="collapse" data-parnet="#accordion" href="#collapseThree" style="text-decoration : none;">Is this course 100% online?</a>
+              </h5>
+            </div>
+
+            <div id="collapseThree" class="collapse">
+              <div class="card-body">
+                This course is completely online.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header" id="heaingOne">
+              <h5 class="mb-0">
+                <a data-toggle="collapse" data-parnet="#accordion" href="#collapseFour" style="text-decoration : none;">Is certification life long valid?</a>
+              </h5>
+            </div>
+
+            <div id="collapseFour" class="collapse">
+              <div class="card-body">
+                Yes, it is life long valid. It does not has any expiry time.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="heaingOne">
+              <h5 class="mb-0">
+                <a data-toggle="collapse" data-parnet="#accordion" href="#collapseFive" style="text-decoration : none;">What are the payment options?</a>
+              </h5>
+            </div>
+
+            <div id="collapseFive" class="collapse">
+              <div class="card-body">
+                You can pay via credit card, debit card, netbanking and paypal.
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="heaingOne">
+              <h5 class="mb-0">
+                <a data-toggle="collapse" data-parnet="#accordion" href="#collapseSix" style="text-decoration : none;">Can I take the course for free?</a>
+              </h5>
+            </div>
+
+            <div id="collapseSix" class="collapse">
+              <div class="card-body">
+                As financial aid is not there, course is not free.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- FAQs ends -->
+
+    <!-- media and industry partners starts -->
+
+    <div class="row">
+      <div class = "col-md-12 mt-4">
+        <h4 class="pl-0 display-4 text-md-center mb-4 text-muted">Industry Partners</h4>
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-11">
+              <img src="https://i.udemycdn.com/partner-logos/booking-logo.svg" alt="boooking-logo" class = "mx-5 bold">
+              <img src="https://i.udemycdn.com/partner-logos/volkswagen-logo.svg" alt="volkswagen-logo" class = "mx-5">
+              <img src="https://i.udemycdn.com/partner-logos/pinterest-logo.svg" alt="pinterest-logo" class = "mx-5">
+              <img src="https://i.udemycdn.com/partner-logos/mercedes-logo.svg" alt="mercedes-logo" class = "mx-5 mt-3">
+              <img src="https://i.udemycdn.com/partner-logos/eventbrite-logo.svg" alt="eventbrite-logo" class = "mx-5 mt-3">
+              <img src="https://i.udemycdn.com/partner-logos/adidas-logo.svg" alt="adidas-logo" class = "mx-5 mt-3">
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- media and industry partners ends -->
+    </div>
+
+    <!-- Details on sticky card starts-->
+    <div class="col-md-2">
+      <div class="card sticky-top">
+        <img src="DataScienceImages\image4.png" alt="DataScience" class="card-img-top">
+        <div class="card-body">
+          <div class = "row">
+            <div class="col-md-10"></div>
+            <div class="col-md-2"><h4 class="card-title float-right">₹12,800</h4></div>
+          </div>
+          <!-- <a href="#" class="btn d-block btn-outline-primary mb-2">Add to cart</a> -->
+          <a href="https://www.udemy.com/course/complete-data-science-and-machine-learning-using-python/" target = "_blank" class="btn d-block btn-outline-danger">Buy Now</a>
+          <p class= "text-center" style= "font-size: 14px;"><small>30-days money back guarantee<small></p>
+          <p class = "card-text mb-0" style = "font-size : 16px;">This course includes</p>
+            <li class = "card-text" style = "font-size : 12px;">24 hours on demand-video</li>
+            <li class = "card-text" style = "font-size : 12px;">Full lifetime access</li>
+            <li class = "card-text" style = "font-size : 12px;">Access on mobile and TV</li>
+            <li class = "card-text" style = "font-size : 12px;">Certificate of completion</li>
+        </div>
+      </div>
+    </div>
+
+    <!-- Details on sticky card starts-->
+  </div>
+</div>
+
+
+<!-- footer starts -->
+
+  <section class="text-center pt-3 pb-3 mt-3 bg-dark text-white">
+    <p style="font-size : 15px;">Copyright 2019 &copy; VisionQuest. All Rights reserved.</p>
+  </section>
+<!-- <div class="row mt-5 text-center">
+  <div class="col">
+    <p>Copyright 2019 &copy; VisionQuest. All Rights reserved.</p>
+  </div>
+</div> -->
+<!-- footer ends -->
+
+</body>
+</html>
